@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     client/client.cpp \
+    controller/filecontroller.cpp \
     controller/logincontroller.cpp \
     controller/registercontroller.cpp \
     database/connection.cpp \
@@ -24,6 +25,8 @@ SOURCES += \
     message/auth/registerclientmessage.cpp \
     message/auth/registerservermessage.cpp \
     message/clientmessage.cpp \
+    message/file/fileclientmessage.cpp \
+    message/file/fileservermessage.cpp \
     message/message.cpp \
     message/servermessage.cpp \
     query/api.cpp \
@@ -38,6 +41,7 @@ SOURCES += \
 
 HEADERS += \
     client/client.h \
+    controller/filecontroller.h \
     controller/logincontroller.h \
     controller/registercontroller.h \
     database/connection.h \
@@ -51,6 +55,8 @@ HEADERS += \
     message/auth/registerclientmessage.h \
     message/auth/registerservermessage.h \
     message/clientmessage.h \
+    message/file/fileclientmessage.h \
+    message/file/fileservermessage.h \
     message/message.h \
     message/servermessage.h \
     query/api.h \

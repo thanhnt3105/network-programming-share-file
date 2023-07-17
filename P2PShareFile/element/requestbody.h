@@ -20,8 +20,9 @@ public slots:
     void createLoginBody(QString username, QString password);
     void createLogoutBody(quint64 id, QString username);
     void createRegisterBody(QString username, QString password);
-    void createUploadFileBody(QString fileName,QString filePath);
     void createSearchFileBody(QString fileName);
+    void createSearchAllFilesBody();
+    void createUploadFileBody(quint64 userId, QString fileName, QString filePath);
 
 signals:
 

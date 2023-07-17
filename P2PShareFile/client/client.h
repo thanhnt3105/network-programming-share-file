@@ -12,8 +12,10 @@
 #include <QStandardPaths>
 #include <QTcpSocket>
 #include <QAbstractSocket>
+#include <QDebug>
 #include <message/auth/loginclientmessage.h>
 #include <message/auth/registerclientmessage.h>
+#include <message/file/fileclientmessage.h>
 class Client : public QObject
 {
     Q_OBJECT
@@ -39,6 +41,9 @@ public slots:
     void login(QString username, QString password);
     void registers(QString username, QString password);
     void sendRequest(QString strMsgToSend);
+    void getAllFile();
+    void searchFile(QString fileName);
+    void uploadFile(QString fileName, QString filePath,quint64 userId);
 //    void logout(quint64 id, QString username);
 signals:
     void Finished(const QJsonDocument& response);

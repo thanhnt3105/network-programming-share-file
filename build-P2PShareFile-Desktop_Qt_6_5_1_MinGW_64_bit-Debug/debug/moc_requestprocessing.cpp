@@ -42,16 +42,22 @@ static constexpr auto qt_meta_stringdata_CLASSRequestProcessingENDCLASS = QtMocH
     "handle",
     "",
     "login",
-    "registers"
+    "registers",
+    "getAllFiles",
+    "searchFileByName",
+    "uploadFile"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSRequestProcessingENDCLASS_t {
-    uint offsetsAndSizes[10];
+    uint offsetsAndSizes[16];
     char stringdata0[18];
     char stringdata1[7];
     char stringdata2[1];
     char stringdata3[6];
     char stringdata4[10];
+    char stringdata5[12];
+    char stringdata6[17];
+    char stringdata7[11];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSRequestProcessingENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -61,13 +67,19 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSRequestProcessingENDCLASS_t qt_
         QT_MOC_LITERAL(18, 6),  // "handle"
         QT_MOC_LITERAL(25, 0),  // ""
         QT_MOC_LITERAL(26, 5),  // "login"
-        QT_MOC_LITERAL(32, 9)   // "registers"
+        QT_MOC_LITERAL(32, 9),  // "registers"
+        QT_MOC_LITERAL(42, 11),  // "getAllFiles"
+        QT_MOC_LITERAL(54, 16),  // "searchFileByName"
+        QT_MOC_LITERAL(71, 10)   // "uploadFile"
     },
     "RequestProcessing",
     "handle",
     "",
     "login",
-    "registers"
+    "registers",
+    "getAllFiles",
+    "searchFileByName",
+    "uploadFile"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -79,7 +91,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSRequestProcessingENDCLASS[] = {
       11,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -87,11 +99,17 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSRequestProcessingENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   32,    2, 0x0a,    1 /* Public */,
-       3,    0,   33,    2, 0x0a,    2 /* Public */,
-       4,    0,   34,    2, 0x0a,    3 /* Public */,
+       1,    0,   50,    2, 0x0a,    1 /* Public */,
+       3,    0,   51,    2, 0x0a,    2 /* Public */,
+       4,    0,   52,    2, 0x0a,    3 /* Public */,
+       5,    0,   53,    2, 0x0a,    4 /* Public */,
+       6,    0,   54,    2, 0x0a,    5 /* Public */,
+       7,    0,   55,    2, 0x0a,    6 /* Public */,
 
  // slots: parameters
+    QMetaType::QString,
+    QMetaType::QString,
+    QMetaType::QString,
     QMetaType::QString,
     QMetaType::QString,
     QMetaType::QString,
@@ -113,6 +131,12 @@ Q_CONSTINIT const QMetaObject RequestProcessing::staticMetaObject = { {
         // method 'login'
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'registers'
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'getAllFiles'
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'searchFileByName'
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'uploadFile'
         QtPrivate::TypeAndForceComplete<QString, std::false_type>
     >,
     nullptr
@@ -129,6 +153,12 @@ void RequestProcessing::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
         case 1: { QString _r = _t->login();
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
         case 2: { QString _r = _t->registers();
+            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
+        case 3: { QString _r = _t->getAllFiles();
+            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
+        case 4: { QString _r = _t->searchFileByName();
+            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
+        case 5: { QString _r = _t->uploadFile();
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
@@ -154,13 +184,13 @@ int RequestProcessing::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 6;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 6)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 3;
+        _id -= 6;
     }
     return _id;
 }

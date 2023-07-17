@@ -50,6 +50,27 @@ void RequestProcessing::setUsernames(const QList<QString> &newUsernames)
     usernames = newUsernames;
 }
 
+File *RequestProcessing::getFile() const
+{
+    return file;
+}
+
+void RequestProcessing::setFile(File *newFile)
+{
+    file = newFile;
+}
+
+
+QList<File *> RequestProcessing::getListFile() const
+{
+    return listFile;
+}
+
+void RequestProcessing::setListFile(const QList<File *> &newListFile)
+{
+    listFile = newListFile;
+}
+
 RequestProcessing::RequestProcessing(QObject *parent)
     : QObject{parent}
 {
@@ -66,6 +87,15 @@ QString RequestProcessing::handle() {
         }
         else if(command.compare("REGISTER")==0) {
             output = this->registers();
+        }
+        else if(command.compare("GETALLFILES")==0) {
+            output = this->getAllFiles();
+        }
+        else if(command.compare("SEARCHFILE")==0) {
+            output = this->searchFileByName();
+        }
+        else if(command.compare("UPLOADFILE")==0) {
+            output = this->uploadFile();
         }
     }
     return output;
@@ -116,6 +146,73 @@ QString RequestProcessing::registers() {
         }
         RegisterController* registerController = new RegisterController();
         msg = registerController->createRgister(username, password);
+        return msg;
+    }
+}
+
+QString RequestProcessing::getAllFiles()
+{
+    QString msg;
+
+    if (this->message.contains("info") && this->message["info"].isString())
+    {
+        QString infoString = this->message["info"].toString();
+        QJsonObject infoObject = QJsonDocument::fromJson(infoString.toUtf8()).object();
+
+        FileController* fileController = new FileController();
+        msg = fileController->getAllFiles();
+        return msg;
+    }
+}
+
+QString RequestProcessing::searchFileByName()
+{
+    QString fileName;
+    QString msg;
+
+    if (this->message.contains("info") && this->message["info"].isString())
+    {
+        QString infoString = this->message["info"].toString();
+        QJsonObject infoObject = QJsonDocument::fromJson(infoString.toUtf8()).object();
+        qDebug() <<"File by name" << infoObject;
+
+        if (infoObject.contains("fileName") && infoObject["fileName"].isString()) {
+            fileName = infoObject["fileName"].toString();
+        }
+
+        FileController* fileController = new FileController();
+        msg = fileController->searchFileByName(fileName);
+        qDebug() <<"File by name msg" << msg;
+        this->listFile = fileController->getFileList();
+        return msg;
+    }
+}
+
+QString RequestProcessing::uploadFile()
+{
+    QString fileName;
+    QString filePath;
+    quint64 userId;
+    QString msg;
+
+    if (this->message.contains("info") && this->message["info"].isString())
+    {
+        QString infoString = this->message["info"].toString();
+        QJsonObject infoObject = QJsonDocument::fromJson(infoString.toUtf8()).object();
+        qDebug() <<"File by name" << infoObject;
+
+        if (infoObject.contains("fileName") && infoObject["fileName"].isString()) {
+            fileName = infoObject["fileName"].toString();
+        }
+        if (infoObject.contains("filePath") && infoObject["filePath"].isString()) {
+            filePath = infoObject["filePath"].toString();
+        }
+        if (infoObject.contains("userId") && infoObject["userId"].isString()) {
+            userId = infoObject["userId"].toInt();
+        }
+
+        FileController* fileController = new FileController();
+        msg = fileController->uploadFile(fileName,filePath,userId);
         return msg;
     }
 }

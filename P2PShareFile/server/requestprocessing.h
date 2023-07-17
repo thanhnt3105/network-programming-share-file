@@ -14,6 +14,8 @@
 
 #include <controller/logincontroller.h>
 #include <controller/registercontroller.h>
+#include <controller/filecontroller.h>
+#include <entity/file.h>
 
 class RequestProcessing : public QObject
 {
@@ -21,8 +23,10 @@ class RequestProcessing : public QObject
 private:
     QJsonObject message;
     User* user;
+    File* file;
     QString ouputMsg;
     QList<User*> users;
+    QList<File*> listFile;
     QList<QString> usernames;
 public:
     explicit RequestProcessing(QObject *parent = nullptr);
@@ -42,10 +46,19 @@ public:
     QList<QString> getUsernames() const;
     void setUsernames(const QList<QString> &newUsernames);
 
+    File *getFile() const;
+    void setFile(File *newFile);
+
+    QList<File *> getListFile() const;
+    void setListFile(const QList<File *> &newListFile);
+
 public slots:
     QString handle();
     QString login();
     QString registers();
+    QString getAllFiles();
+    QString searchFileByName();
+    QString uploadFile();
 
 signals:
 

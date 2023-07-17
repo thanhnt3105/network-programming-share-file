@@ -36,3 +36,35 @@ void ResponseBody::createRegisterBody(QString username, QString password)
     this->responseBody.insert("password",password);
 
 }
+
+void ResponseBody::createSearchFileBody(QList<File*> fileList)
+{
+    this->responseBody = QJsonObject();
+
+    QJsonArray fileArray;
+    for (File* file : fileList) {
+        QJsonObject fileObject;
+        fileObject["id"] = static_cast<qint64>(file->getId());
+        fileObject["file_name"] = file->getFileName();
+        fileObject["file_path"] = file->getFilePath();
+        fileObject["user_id"] = static_cast<qint64>(file->getUser()->getId());
+        fileObject["username"] = file->getUser()->getUsername();
+
+        fileArray.append(fileObject);
+    }
+     this->responseBody.insert("files", fileArray);
+}
+
+void ResponseBody::createGetAllFilesBody()
+{
+     this->responseBody = QJsonObject();
+}
+
+void ResponseBody::createUploadFileBody(QString fileName, QString filePath, quint64 userId)
+{
+    this->responseBody = QJsonObject();
+    this->responseBody.insert("fileName",fileName);
+    this->responseBody.insert("filePath",filePath);
+    this->responseBody.insert("userId",static_cast<qint64>(userId));
+
+}

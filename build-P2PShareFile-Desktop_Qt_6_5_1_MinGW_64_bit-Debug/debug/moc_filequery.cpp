@@ -48,11 +48,12 @@ static constexpr auto qt_meta_stringdata_CLASSFileQueryENDCLASS = QtMocHelpers::
     "saveFileByUserId",
     "filePath",
     "removeFileById",
-    "fileId"
+    "fileId",
+    "getAllFiles"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSFileQueryENDCLASS_t {
-    uint offsetsAndSizes[22];
+    uint offsetsAndSizes[24];
     char stringdata0[10];
     char stringdata1[17];
     char stringdata2[13];
@@ -64,6 +65,7 @@ struct qt_meta_stringdata_CLASSFileQueryENDCLASS_t {
     char stringdata8[9];
     char stringdata9[15];
     char stringdata10[7];
+    char stringdata11[12];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSFileQueryENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -79,7 +81,8 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSFileQueryENDCLASS_t qt_meta_str
         QT_MOC_LITERAL(74, 16),  // "saveFileByUserId"
         QT_MOC_LITERAL(91, 8),  // "filePath"
         QT_MOC_LITERAL(100, 14),  // "removeFileById"
-        QT_MOC_LITERAL(115, 6)   // "fileId"
+        QT_MOC_LITERAL(115, 6),  // "fileId"
+        QT_MOC_LITERAL(122, 11)   // "getAllFiles"
     },
     "FileQuery",
     "getAllFileByName",
@@ -91,7 +94,8 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSFileQueryENDCLASS_t qt_meta_str
     "saveFileByUserId",
     "filePath",
     "removeFileById",
-    "fileId"
+    "fileId",
+    "getAllFiles"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -103,7 +107,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSFileQueryENDCLASS[] = {
       11,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -111,16 +115,18 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSFileQueryENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   38,    3, 0x0a,    1 /* Public */,
-       5,    1,   41,    3, 0x0a,    3 /* Public */,
-       7,    3,   44,    3, 0x0a,    5 /* Public */,
-       9,    1,   51,    3, 0x0a,    9 /* Public */,
+       1,    1,   44,    3, 0x0a,    1 /* Public */,
+       5,    1,   47,    3, 0x0a,    3 /* Public */,
+       7,    3,   50,    3, 0x0a,    5 /* Public */,
+       9,    1,   57,    3, 0x0a,    9 /* Public */,
+      11,    0,   60,    3, 0x0a,   11 /* Public */,
 
  // slots: parameters
     0x80000000 | 2, QMetaType::QString,    4,
     0x80000000 | 2, QMetaType::ULongLong,    6,
     QMetaType::Void, QMetaType::ULongLong, QMetaType::QString, QMetaType::QString,    6,    4,    8,
     QMetaType::Void, QMetaType::ULongLong,   10,
+    0x80000000 | 2,
 
        0        // eod
 };
@@ -147,7 +153,9 @@ Q_CONSTINIT const QMetaObject FileQuery::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'removeFileById'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<quint64, std::false_type>
+        QtPrivate::TypeAndForceComplete<quint64, std::false_type>,
+        // method 'getAllFiles'
+        QtPrivate::TypeAndForceComplete<QList<File*>, std::false_type>
     >,
     nullptr
 } };
@@ -164,6 +172,8 @@ void FileQuery::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
             if (_a[0]) *reinterpret_cast< QList<File*>*>(_a[0]) = std::move(_r); }  break;
         case 2: _t->saveFileByUserId((*reinterpret_cast< std::add_pointer_t<quint64>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3]))); break;
         case 3: _t->removeFileById((*reinterpret_cast< std::add_pointer_t<quint64>>(_a[1]))); break;
+        case 4: { QList<File*> _r = _t->getAllFiles();
+            if (_a[0]) *reinterpret_cast< QList<File*>*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
     }
@@ -188,13 +198,13 @@ int FileQuery::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }

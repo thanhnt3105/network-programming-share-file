@@ -35,17 +35,22 @@ void RequestBody::createRegisterBody(QString username, QString password) {
     this->requestBody.insert("password", password);
 }
 
-void RequestBody::createUploadFileBody(QString fileName,QString filePath)
-{
-    this->requestBody = QJsonObject();
-
-    this->requestBody.insert("fileName",fileName);
-    this->requestBody.insert("filePath",filePath);
-}
-
 void RequestBody::createSearchFileBody(QString fileName)
 {
     this->requestBody = QJsonObject();
 
     this->requestBody.insert("fileName",fileName);
+}
+
+void RequestBody::createSearchAllFilesBody()
+{
+    this->requestBody = QJsonObject();
+}
+
+void RequestBody::createUploadFileBody(quint64 userId, QString fileName, QString filePath)
+{
+    this->requestBody = QJsonObject();
+    this->requestBody.insert("fileName",fileName);
+    this->requestBody.insert("filePath",filePath);
+    this->requestBody.insert("userId",static_cast<qint64>(userId));
 }

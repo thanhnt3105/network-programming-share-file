@@ -15,6 +15,7 @@ public slots:
     QList<File*> getFilesByUserId(quint64 userId);
     void saveFileByUserId(quint64 userId, QString fileName, QString filePath);
     void removeFileById(quint64 fileId);
+    QList<File*> getAllFiles();
 signals:
 
 };

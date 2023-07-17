@@ -48,4 +48,19 @@ QString ServerCreateMessage::createMessage(QString msg)
                                                                      "");
         return serverMsg->toString();
     }
+    else if(msg.compare("file not found")==0) {
+        FileServerMessage* serverMsg = new FileServerMessage("file not found");
+        return serverMsg->toString();
+    }
+    else if(msg.compare("file found")==0) {
+//        FileServerMessage* serverMsg = new FileServerMessage(this->requestProcessing->getFile()->getFileName(),"");
+        FileServerMessage* serverMsg = new FileServerMessage(this->requestProcessing->getListFile(),"");
+        return serverMsg->toString();
+    }
+    else if(msg.compare("upload file successfully")==0){
+        FileServerMessage*serverMsg = new FileServerMessage(this->requestProcessing->getFile()->getFileName(),
+                                                            this->requestProcessing->getFile()->getFilePath(),
+                                                             this->requestProcessing->getUser()->getId(),"");
+        return serverMsg->toString();
+    }
 }

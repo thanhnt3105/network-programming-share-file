@@ -1,4 +1,5 @@
 debug/client.o
+debug/filecontroller.o
 debug/logincontroller.o
 debug/registercontroller.o
 debug/connection.o
@@ -13,6 +14,8 @@ debug/loginservermessage.o
 debug/registerclientmessage.o
 debug/registerservermessage.o
 debug/clientmessage.o
+debug/fileclientmessage.o
+debug/fileservermessage.o
 debug/message.o
 debug/servermessage.o
 debug/api.o
@@ -26,6 +29,7 @@ debug/server.o
 debug/servercreatemessage.o
 debug/qrc_resouce.o
 debug/moc_client.o
+debug/moc_filecontroller.o
 debug/moc_logincontroller.o
 debug/moc_registercontroller.o
 debug/moc_connection.o
@@ -39,6 +43,8 @@ debug/moc_loginservermessage.o
 debug/moc_registerclientmessage.o
 debug/moc_registerservermessage.o
 debug/moc_clientmessage.o
+debug/moc_fileclientmessage.o
+debug/moc_fileservermessage.o
 debug/moc_message.o
 debug/moc_servermessage.o
 debug/moc_filequery.o

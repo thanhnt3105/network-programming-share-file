@@ -8,6 +8,7 @@
 
 #include "../../P2PShareFile/element/responsebody.h"
 #include <QtCore/qmetatype.h>
+#include <QtCore/QList>
 
 #if __has_include(<QtCore/qtmochelpers.h>)
 #include <QtCore/qtmochelpers.h>
@@ -48,11 +49,19 @@ static constexpr auto qt_meta_stringdata_CLASSResponseBodyENDCLASS = QtMocHelper
     "username",
     "createLogoutBody",
     "createRegisterBody",
-    "password"
+    "password",
+    "createSearchFileBody",
+    "QList<File*>",
+    "fileList",
+    "createGetAllFilesBody",
+    "createUploadFileBody",
+    "fileName",
+    "filePath",
+    "userId"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSResponseBodyENDCLASS_t {
-    uint offsetsAndSizes[22];
+    uint offsetsAndSizes[38];
     char stringdata0[13];
     char stringdata1[16];
     char stringdata2[1];
@@ -64,6 +73,14 @@ struct qt_meta_stringdata_CLASSResponseBodyENDCLASS_t {
     char stringdata8[17];
     char stringdata9[19];
     char stringdata10[9];
+    char stringdata11[21];
+    char stringdata12[13];
+    char stringdata13[9];
+    char stringdata14[22];
+    char stringdata15[21];
+    char stringdata16[9];
+    char stringdata17[9];
+    char stringdata18[7];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSResponseBodyENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -79,7 +96,15 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSResponseBodyENDCLASS_t qt_meta_
         QT_MOC_LITERAL(78, 8),  // "username"
         QT_MOC_LITERAL(87, 16),  // "createLogoutBody"
         QT_MOC_LITERAL(104, 18),  // "createRegisterBody"
-        QT_MOC_LITERAL(123, 8)   // "password"
+        QT_MOC_LITERAL(123, 8),  // "password"
+        QT_MOC_LITERAL(132, 20),  // "createSearchFileBody"
+        QT_MOC_LITERAL(153, 12),  // "QList<File*>"
+        QT_MOC_LITERAL(166, 8),  // "fileList"
+        QT_MOC_LITERAL(175, 21),  // "createGetAllFilesBody"
+        QT_MOC_LITERAL(197, 20),  // "createUploadFileBody"
+        QT_MOC_LITERAL(218, 8),  // "fileName"
+        QT_MOC_LITERAL(227, 8),  // "filePath"
+        QT_MOC_LITERAL(236, 6)   // "userId"
     },
     "ResponseBody",
     "setResponseBody",
@@ -91,7 +116,15 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSResponseBodyENDCLASS_t qt_meta_
     "username",
     "createLogoutBody",
     "createRegisterBody",
-    "password"
+    "password",
+    "createSearchFileBody",
+    "QList<File*>",
+    "fileList",
+    "createGetAllFilesBody",
+    "createUploadFileBody",
+    "fileName",
+    "filePath",
+    "userId"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -103,7 +136,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSResponseBodyENDCLASS[] = {
       11,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -111,11 +144,14 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSResponseBodyENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   44,    2, 0x0a,    1 /* Public */,
-       4,    0,   47,    2, 0x0a,    3 /* Public */,
-       5,    2,   48,    2, 0x0a,    4 /* Public */,
-       8,    2,   53,    2, 0x0a,    7 /* Public */,
-       9,    2,   58,    2, 0x0a,   10 /* Public */,
+       1,    1,   62,    2, 0x0a,    1 /* Public */,
+       4,    0,   65,    2, 0x0a,    3 /* Public */,
+       5,    2,   66,    2, 0x0a,    4 /* Public */,
+       8,    2,   71,    2, 0x0a,    7 /* Public */,
+       9,    2,   76,    2, 0x0a,   10 /* Public */,
+      11,    1,   81,    2, 0x0a,   13 /* Public */,
+      14,    0,   84,    2, 0x0a,   15 /* Public */,
+      15,    3,   85,    2, 0x0a,   16 /* Public */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::QJsonObject,    3,
@@ -123,6 +159,9 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSResponseBodyENDCLASS[] = {
     QMetaType::Void, QMetaType::ULongLong, QMetaType::QString,    6,    7,
     QMetaType::Void, QMetaType::ULongLong, QMetaType::QString,    6,    7,
     QMetaType::Void, QMetaType::QString, QMetaType::QString,    7,   10,
+    QMetaType::Void, 0x80000000 | 12,   13,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::ULongLong,   16,   17,   18,
 
        0        // eod
 };
@@ -152,7 +191,17 @@ Q_CONSTINIT const QMetaObject ResponseBody::staticMetaObject = { {
         // method 'createRegisterBody'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'createSearchFileBody'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QList<File*>, std::false_type>,
+        // method 'createGetAllFilesBody'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'createUploadFileBody'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<quint64, std::false_type>
     >,
     nullptr
 } };
@@ -169,7 +218,21 @@ void ResponseBody::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         case 2: _t->createLoginBody((*reinterpret_cast< std::add_pointer_t<quint64>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
         case 3: _t->createLogoutBody((*reinterpret_cast< std::add_pointer_t<quint64>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
         case 4: _t->createRegisterBody((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
+        case 5: _t->createSearchFileBody((*reinterpret_cast< std::add_pointer_t<QList<File*>>>(_a[1]))); break;
+        case 6: _t->createGetAllFilesBody(); break;
+        case 7: _t->createUploadFileBody((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<quint64>>(_a[3]))); break;
         default: ;
+        }
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        switch (_id) {
+        default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+        case 5:
+            switch (*reinterpret_cast<int*>(_a[1])) {
+            default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+            case 0:
+                *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QList<File*> >(); break;
+            }
+            break;
         }
     }
 }
@@ -193,13 +256,13 @@ int ResponseBody::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 8;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
-            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 5;
+        if (_id < 8)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 8;
     }
     return _id;
 }

@@ -6,6 +6,7 @@
 #include <server/requestprocessing.h>
 #include <message/auth/loginservermessage.h>
 #include <message/auth/registerservermessage.h>
+#include <message/file/fileservermessage.h>
 
 class ServerCreateMessage : public QObject
 {

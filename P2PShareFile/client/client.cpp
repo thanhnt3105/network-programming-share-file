@@ -81,6 +81,25 @@ void Client::sendRequest(QString strMsgToSend) {
     socket->waitForBytesWritten();
 }
 
+void Client::getAllFile()
+{
+    FileClientMessage*fileMsg= new FileClientMessage();
+    sendRequest(fileMsg->toString());
+}
+
+void Client::searchFile(QString fileName)
+{
+    FileClientMessage*fileMsg = new FileClientMessage(fileName);
+    qDebug()<<"file request" << fileMsg->toString();
+    sendRequest(fileMsg->toString());
+}
+
+void Client::uploadFile(QString fileName, QString filePath,quint64 userId)
+{
+    FileClientMessage*fileMsg = new FileClientMessage(fileName,filePath,userId);
+    sendRequest(fileMsg->toString());
+}
+
 void Client::login(QString username, QString password) {
     LoginClientMessage* clientMsg = new LoginClientMessage(username, password);
     sendRequest(clientMsg->toString());

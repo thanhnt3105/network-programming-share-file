@@ -6,6 +6,8 @@
 #include <QList>
 #include <QJsonArray>
 #include <QStringList>
+#include <entity/file.h>
+#include <QList>
 
 class ResponseBody : public QObject
 {
@@ -20,6 +22,9 @@ public slots:
     void createLoginBody(quint64 id, QString username);
     void createLogoutBody(quint64 id, QString username);
     void createRegisterBody(QString username,QString password);
+    void createSearchFileBody(QList<File*> fileList);
+    void createGetAllFilesBody();
+    void createUploadFileBody(QString fileName,QString filePath,quint64 userId);
 
 signals:
 

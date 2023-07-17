@@ -75,6 +75,7 @@ void Server::onReadyRead() {
                 connectionSet.insert(serverCreateMessage->getRequestProcessing()->getUser()->getId(), clientSocket);
             }
         }
+        qDebug() << "Server receive:" << msg;
 
         if(msg.contains("requestjoin")) {
             quint64 ownerId;

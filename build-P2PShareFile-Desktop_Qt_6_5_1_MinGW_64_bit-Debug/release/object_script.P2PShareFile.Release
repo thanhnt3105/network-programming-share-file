@@ -1,4 +1,5 @@
 release/client.o
+release/filecontroller.o
 release/logincontroller.o
 release/registercontroller.o
 release/connection.o
@@ -13,6 +14,8 @@ release/loginservermessage.o
 release/registerclientmessage.o
 release/registerservermessage.o
 release/clientmessage.o
+release/fileclientmessage.o
+release/fileservermessage.o
 release/message.o
 release/servermessage.o
 release/api.o
@@ -26,6 +29,7 @@ release/server.o
 release/servercreatemessage.o
 release/qrc_resouce.o
 release/moc_client.o
+release/moc_filecontroller.o
 release/moc_logincontroller.o
 release/moc_registercontroller.o
 release/moc_connection.o
@@ -39,6 +43,8 @@ release/moc_loginservermessage.o
 release/moc_registerclientmessage.o
 release/moc_registerservermessage.o
 release/moc_clientmessage.o
+release/moc_fileclientmessage.o
+release/moc_fileservermessage.o
 release/moc_message.o
 release/moc_servermessage.o
 release/moc_filequery.o

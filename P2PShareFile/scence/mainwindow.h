@@ -5,7 +5,11 @@
 #include <QTcpSocket>
 #include <QUdpSocket>
 #include <QFile>
+#include <QDebug>
 #include <QLabel>
+#include <client/client.h>
+#include <entity/user.h>
+#include <entity/file.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,31 +19,31 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
+private:
+    File*file;
+
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    Client *getClientCore() const;
+    void setClientCore(Client *newClientCore);
+
 private slots:
 
-    void connectServer();
-    void haveconnected(); // status connection
-    void displayError(QAbstractSocket::SocketError); //Display error
+    void on_searchButton_clicked();
 
-    void openFile();//Open file
-    void startTransferFile();  //Send file size information
-    void updateClientProgress(qint64); //Send file data, update progress
-
-    void updateServerProgress(); //Receive data and update the progress bar
+    void handleGetFileResponse(const QJsonDocument &response);
 
     void on_openButton_clicked();
-    void on_connectButton_clicked();
-    void on_disconnectButton_clicked();
-    void on_sendFileButton_clicked();
-    void on_openFolderButton_clicked();
-    void on_textBrowser_textChanged();
+
+    void on_uploadButton_clicked();
+
+    void handleUploadResponse(const QJsonDocument& response);;
 
 private:
     Ui::MainWindow *ui;
+    Client*client;
 
     QUdpSocket *UdpSender;
     QUdpSocket *UdpReader;
