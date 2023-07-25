@@ -29,12 +29,16 @@ SOURCES += \
     message/file/fileservermessage.cpp \
     message/message.cpp \
     message/servermessage.cpp \
+    peertopeer/localconnection.cpp \
+    peertopeer/localserver.cpp \
     query/api.cpp \
     query/filequery.cpp \
     query/userquery.cpp \
+    scence/fileresult.cpp \
     scence/mainwindow.cpp \
     scence/registerwindow.cpp \
     scence/loginwindow.cpp \
+    server/connectioninfor.cpp \
     server/requestprocessing.cpp \
     server/server.cpp \
     server/servercreatemessage.cpp
@@ -59,17 +63,22 @@ HEADERS += \
     message/file/fileservermessage.h \
     message/message.h \
     message/servermessage.h \
+    peertopeer/localconnection.h \
+    peertopeer/localserver.h \
     query/api.h \
     query/filequery.h \
     query/userquery.h \
+    scence/fileresult.h \
     scence/mainwindow.h \
     scence/registerwindow.h \
     scence/loginwindow.h \
+    server/connectioninfor.h \
     server/requestprocessing.h \
     server/server.h \
     server/servercreatemessage.h
 
 FORMS += \
+    scence/fileresult.ui \
     scence/loginwindow.ui \
     scence/mainwindow.ui \
     scence/registerwindow.ui \

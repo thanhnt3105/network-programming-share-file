@@ -10,6 +10,9 @@
 #include <client/client.h>
 #include <entity/user.h>
 #include <entity/file.h>
+#include <QVBoxLayout>
+#include <scence/fileresult.h>
+#include <QVector>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -21,6 +24,7 @@ class MainWindow : public QMainWindow
 
 private:
     File*file;
+    FileResult * fileResult;
 
 public:
     MainWindow(QWidget *parent = nullptr);
@@ -28,6 +32,8 @@ public:
 
     Client *getClientCore() const;
     void setClientCore(Client *newClientCore);
+
+
 
 private slots:
 

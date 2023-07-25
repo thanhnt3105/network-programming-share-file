@@ -192,8 +192,8 @@ QString RequestProcessing::uploadFile()
 {
     QString fileName;
     QString filePath;
-    quint64 userId;
-    QString msg;
+    quint64 userId=NULL;
+    QString msg="can not upload file";
 
     if (this->message.contains("info") && this->message["info"].isString())
     {
@@ -207,12 +207,12 @@ QString RequestProcessing::uploadFile()
         if (infoObject.contains("filePath") && infoObject["filePath"].isString()) {
             filePath = infoObject["filePath"].toString();
         }
-        if (infoObject.contains("userId") && infoObject["userId"].isString()) {
+        if (infoObject.contains("userId")) {
             userId = infoObject["userId"].toInt();
         }
 
         FileController* fileController = new FileController();
         msg = fileController->uploadFile(fileName,filePath,userId);
-        return msg;
     }
+    return msg;
 }

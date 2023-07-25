@@ -18,6 +18,7 @@ ServerCreateMessage::ServerCreateMessage(QObject *parent)
 
 QString ServerCreateMessage::createMessage(QString msg)
 {
+    qDebug() << "mess" << msg;
     if(msg.compare("login successfully")==0) {
         LoginServerMessage* serverMsg = new LoginServerMessage(this->requestProcessing->getUser()->getId(),
                                                                this->requestProcessing->getUser()->getUsername(),
@@ -57,10 +58,8 @@ QString ServerCreateMessage::createMessage(QString msg)
         FileServerMessage* serverMsg = new FileServerMessage(this->requestProcessing->getListFile(),"");
         return serverMsg->toString();
     }
-    else if(msg.compare("upload file successfully")==0){
-        FileServerMessage*serverMsg = new FileServerMessage(this->requestProcessing->getFile()->getFileName(),
-                                                            this->requestProcessing->getFile()->getFilePath(),
-                                                             this->requestProcessing->getUser()->getId(),"");
+    else if(msg.compare("save file successfully")==0){
+        FileServerMessage*serverMsg = new FileServerMessage("");
         return serverMsg->toString();
     }
 }

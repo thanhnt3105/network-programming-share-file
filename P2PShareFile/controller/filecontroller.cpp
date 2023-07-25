@@ -41,14 +41,6 @@ QString FileController::searchFileByName(QString fileName)
         return "file not found";
     } else {
         this->setFileList(fileList);
-        for (File* file : fileList) {
-            qDebug() << "File ID: " << file->getId();
-            qDebug() << "File Name: " << file->getFileName();
-            qDebug() << "File Path: " << file->getFilePath();
-            qDebug() << "User ID: " << file->getUser()->getId();
-            qDebug() << "Username: " << file->getUser()->getUsername();
-            qDebug() << "-----------------------";
-        }
         return "file found";
     }
 }

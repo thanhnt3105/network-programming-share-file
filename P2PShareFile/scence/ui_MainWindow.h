@@ -1,5 +1,5 @@
 /********************************************************************************
-** Form generated from reading UI file 'MainWindow.ui'
+** Form generated from reading UI file 'mainwindow.ui'
 **
 ** Created by: Qt User Interface Compiler version 6.5.1
 **
@@ -17,8 +17,10 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QScrollArea>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTextBrowser>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -32,7 +34,10 @@ public:
     QLineEdit *fileNameLineEdit;
     QPushButton *searchButton;
     QGroupBox *groupBox_3;
-    QTextBrowser *textBrowser;
+    QScrollArea *scrollArea_5;
+    QWidget *scrollAreaWidgetContents_14;
+    QVBoxLayout *verticalLayout_8;
+    QVBoxLayout *fileResultLayout;
     QGroupBox *groupBox_4;
     QTextBrowser *textStatusBrowser;
     QGroupBox *groupBox_2;
@@ -64,9 +69,29 @@ public:
         groupBox_3 = new QGroupBox(centralwidget);
         groupBox_3->setObjectName("groupBox_3");
         groupBox_3->setGeometry(QRect(270, 20, 381, 241));
-        textBrowser = new QTextBrowser(groupBox_3);
-        textBrowser->setObjectName("textBrowser");
-        textBrowser->setGeometry(QRect(10, 20, 361, 211));
+        scrollArea_5 = new QScrollArea(groupBox_3);
+        scrollArea_5->setObjectName("scrollArea_5");
+        scrollArea_5->setGeometry(QRect(0, 20, 381, 221));
+        scrollArea_5->setMaximumSize(QSize(800, 640));
+        scrollArea_5->setStyleSheet(QString::fromUtf8("background: transparent;"));
+        scrollArea_5->setFrameShape(QFrame::NoFrame);
+        scrollArea_5->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        scrollArea_5->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        scrollArea_5->setWidgetResizable(true);
+        scrollAreaWidgetContents_14 = new QWidget();
+        scrollAreaWidgetContents_14->setObjectName("scrollAreaWidgetContents_14");
+        scrollAreaWidgetContents_14->setGeometry(QRect(0, 0, 381, 221));
+        scrollAreaWidgetContents_14->setMinimumSize(QSize(0, 0));
+        scrollAreaWidgetContents_14->setStyleSheet(QString::fromUtf8(""));
+        verticalLayout_8 = new QVBoxLayout(scrollAreaWidgetContents_14);
+        verticalLayout_8->setObjectName("verticalLayout_8");
+        verticalLayout_8->setContentsMargins(0, 0, 0, 0);
+        fileResultLayout = new QVBoxLayout();
+        fileResultLayout->setObjectName("fileResultLayout");
+
+        verticalLayout_8->addLayout(fileResultLayout);
+
+        scrollArea_5->setWidget(scrollAreaWidgetContents_14);
         groupBox_4 = new QGroupBox(centralwidget);
         groupBox_4->setObjectName("groupBox_4");
         groupBox_4->setGeometry(QRect(270, 300, 381, 121));
