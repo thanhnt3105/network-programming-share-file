@@ -18,10 +18,3 @@ bool LocalServer::startServer()
     return this->listen(this->myIp, this->myPort);
 }
 
-void LocalServer::incomingConnection(qintptr socketDescriptor)
-{
-    LocalConnection *connection = new LocalConnection(this);
-    connection->setSocketDescriptor(socketDescriptor);
-    emit newLocalConnection(connection);
-    QMessageBox::critical(nullptr, "Error", "A new connection");
-}

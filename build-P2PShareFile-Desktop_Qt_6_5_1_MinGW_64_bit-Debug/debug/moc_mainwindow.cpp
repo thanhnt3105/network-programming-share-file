@@ -47,12 +47,19 @@ static constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers:
     "on_openButton_clicked",
     "on_uploadButton_clicked",
     "handleUploadResponse",
-    "handleNewConnection",
-    "LocalConnection*"
+    "onReadyRead",
+    "onDisconnected",
+    "onNewConnection",
+    "displayError",
+    "QAbstractSocket::SocketError",
+    "openFile",
+    "startTransferFile",
+    "updateClientProgress",
+    "updateServerProgress"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
-    uint offsetsAndSizes[20];
+    uint offsetsAndSizes[34];
     char stringdata0[11];
     char stringdata1[24];
     char stringdata2[1];
@@ -61,8 +68,15 @@ struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
     char stringdata5[22];
     char stringdata6[24];
     char stringdata7[21];
-    char stringdata8[20];
-    char stringdata9[17];
+    char stringdata8[12];
+    char stringdata9[15];
+    char stringdata10[16];
+    char stringdata11[13];
+    char stringdata12[29];
+    char stringdata13[9];
+    char stringdata14[18];
+    char stringdata15[21];
+    char stringdata16[21];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSMainWindowENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -76,8 +90,15 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
         QT_MOC_LITERAL(67, 21),  // "on_openButton_clicked"
         QT_MOC_LITERAL(89, 23),  // "on_uploadButton_clicked"
         QT_MOC_LITERAL(113, 20),  // "handleUploadResponse"
-        QT_MOC_LITERAL(134, 19),  // "handleNewConnection"
-        QT_MOC_LITERAL(154, 16)   // "LocalConnection*"
+        QT_MOC_LITERAL(134, 11),  // "onReadyRead"
+        QT_MOC_LITERAL(146, 14),  // "onDisconnected"
+        QT_MOC_LITERAL(161, 15),  // "onNewConnection"
+        QT_MOC_LITERAL(177, 12),  // "displayError"
+        QT_MOC_LITERAL(190, 28),  // "QAbstractSocket::SocketError"
+        QT_MOC_LITERAL(219, 8),  // "openFile"
+        QT_MOC_LITERAL(228, 17),  // "startTransferFile"
+        QT_MOC_LITERAL(246, 20),  // "updateClientProgress"
+        QT_MOC_LITERAL(267, 20)   // "updateServerProgress"
     },
     "MainWindow",
     "on_searchButton_clicked",
@@ -87,8 +108,15 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
     "on_openButton_clicked",
     "on_uploadButton_clicked",
     "handleUploadResponse",
-    "handleNewConnection",
-    "LocalConnection*"
+    "onReadyRead",
+    "onDisconnected",
+    "onNewConnection",
+    "displayError",
+    "QAbstractSocket::SocketError",
+    "openFile",
+    "startTransferFile",
+    "updateClientProgress",
+    "updateServerProgress"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -100,7 +128,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       11,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+      13,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -108,12 +136,19 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   50,    2, 0x08,    1 /* Private */,
-       3,    1,   51,    2, 0x08,    2 /* Private */,
-       5,    0,   54,    2, 0x08,    4 /* Private */,
-       6,    0,   55,    2, 0x08,    5 /* Private */,
-       7,    1,   56,    2, 0x08,    6 /* Private */,
-       8,    1,   59,    2, 0x0a,    8 /* Public */,
+       1,    0,   92,    2, 0x08,    1 /* Private */,
+       3,    1,   93,    2, 0x08,    2 /* Private */,
+       5,    0,   96,    2, 0x08,    4 /* Private */,
+       6,    0,   97,    2, 0x08,    5 /* Private */,
+       7,    1,   98,    2, 0x08,    6 /* Private */,
+       8,    0,  101,    2, 0x08,    8 /* Private */,
+       9,    0,  102,    2, 0x08,    9 /* Private */,
+      10,    0,  103,    2, 0x08,   10 /* Private */,
+      11,    1,  104,    2, 0x08,   11 /* Private */,
+      13,    0,  107,    2, 0x08,   13 /* Private */,
+      14,    0,  108,    2, 0x08,   14 /* Private */,
+      15,    1,  109,    2, 0x08,   15 /* Private */,
+      16,    0,  112,    2, 0x08,   17 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -121,7 +156,14 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::QJsonDocument,    4,
-    QMetaType::Void, 0x80000000 | 9,    2,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 12,    2,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::LongLong,    2,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -147,9 +189,24 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         // method 'handleUploadResponse'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QJsonDocument &, std::false_type>,
-        // method 'handleNewConnection'
+        // method 'onReadyRead'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<LocalConnection *, std::false_type>
+        // method 'onDisconnected'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onNewConnection'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'displayError'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QAbstractSocket::SocketError, std::false_type>,
+        // method 'openFile'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'startTransferFile'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'updateClientProgress'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<qint64, std::false_type>,
+        // method 'updateServerProgress'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
@@ -165,17 +222,24 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 2: _t->on_openButton_clicked(); break;
         case 3: _t->on_uploadButton_clicked(); break;
         case 4: _t->handleUploadResponse((*reinterpret_cast< std::add_pointer_t<QJsonDocument>>(_a[1]))); break;
-        case 5: _t->handleNewConnection((*reinterpret_cast< std::add_pointer_t<LocalConnection*>>(_a[1]))); break;
+        case 5: _t->onReadyRead(); break;
+        case 6: _t->onDisconnected(); break;
+        case 7: _t->onNewConnection(); break;
+        case 8: _t->displayError((*reinterpret_cast< std::add_pointer_t<QAbstractSocket::SocketError>>(_a[1]))); break;
+        case 9: _t->openFile(); break;
+        case 10: _t->startTransferFile(); break;
+        case 11: _t->updateClientProgress((*reinterpret_cast< std::add_pointer_t<qint64>>(_a[1]))); break;
+        case 12: _t->updateServerProgress(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         switch (_id) {
         default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
-        case 5:
+        case 8:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
             case 0:
-                *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< LocalConnection* >(); break;
+                *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QAbstractSocket::SocketError >(); break;
             }
             break;
         }
@@ -201,13 +265,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 13)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 13;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 13)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 13;
     }
     return _id;
 }

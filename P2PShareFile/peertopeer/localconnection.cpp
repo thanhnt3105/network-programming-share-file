@@ -16,8 +16,11 @@ LocalConnection::LocalConnection(QObject *parent) :
     this->isGreetingMessageSent = false;
 
     connect(this, SIGNAL(readyRead()), this, SLOT(processReadyRead()));
+
     connect(this, SIGNAL(connected()), this, SLOT(sendGreetingMessage()));
+
     connect(this, SIGNAL(disconnected()), this, SLOT(handleDisconnected()));
+
     connect(this, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(handleSocketError(QAbstractSocket::SocketError)));
 
 }
@@ -81,10 +84,14 @@ bool LocalConnection::sendMessage(const QString message)
 
 void LocalConnection::sendGreetingMessage()
 {
-    QByteArray greeting = this->greetingMessage.toUtf8();
-    QByteArray data = "GREETING " + QByteArray::number(greeting.size()) + ' ' + greeting;
-    if( this->write(data) == data.size() )
-        isGreetingMessageSent = true;
+
+    QByteArray data = this->greetingMessage.toUtf8();
+    QBuffer* buffer = new QBuffer(this);
+    buffer->setData(data);
+    buffer->open(QIODevice::ReadWrite);
+    this->write(buffer->data());
+    this->waitForBytesWritten();
+    isGreetingMessageSent = true;
 }
 
 

@@ -15,6 +15,8 @@
 #include <QVector>
 #include <session/session.h>
 #include <peertopeer/localserver.h>
+#include <server/servercreatemessage.h>
+#include <QTimer>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -28,6 +30,7 @@ private:
     File*file;
     FileResult * fileResult;
     LocalServer* localServer;
+    QTimer* timer;
 
 public:
     MainWindow(QWidget *parent = nullptr);
@@ -49,21 +52,27 @@ private slots:
 
     void on_uploadButton_clicked();
 
-    void handleUploadResponse(const QJsonDocument& response);;
+    void handleUploadResponse(const QJsonDocument& response);
+    void onReadyRead();
+    void onDisconnected();
+    void onNewConnection();
+    void displayError(QAbstractSocket::SocketError); //显示错误
+    void updateFileList();
 
-public slots:
-    void handleNewConnection(LocalConnection*);
+    void openFile();  //打开文件
+    void startTransferFile();  //发送文件大小等信息
+    void updateClientProgress(qint64); //发送数据，更新进度条
+
+    void updateServerProgress(); //接收数据，更新进度条
 
 private:
     Ui::MainWindow *ui;
     Client*client;
 
-    QUdpSocket *UdpSender;
-    QUdpSocket *UdpReader;
-    QString localMessage; // 存放本地要发送的信息
-    QString serverMessage;  //存放从服务器接收到的信息
-
     QTcpSocket *tcpClient;
+
+
+    QTcpSocket *tcpSocket;
 
     quint16 blockSize;  //存放接收到的信息大小
     QFile *localFile;  //要发送的文件
@@ -77,10 +86,6 @@ private:
     qint64 bytesReceived;  //已收到数据的大小
     qint64 fileNameSize;  //文件名的大小信息
     QByteArray inBlock;   //数据缓冲区
-
-    QFile *historyMessage;
-    void setKeyvalue(bool connectKey, bool disconnectKey,bool openFileKey,bool sendFileKey);
-
 
     QLabel* currentUserLabel;
 };

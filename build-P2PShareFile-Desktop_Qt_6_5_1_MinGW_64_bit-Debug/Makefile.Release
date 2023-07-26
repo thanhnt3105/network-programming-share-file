@@ -2702,6 +2702,19 @@ release/moc_localconnection.cpp: ../P2PShareFile/peertopeer/localconnection.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qvarlengtharray.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/q20memory.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qvariant.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QJsonObject \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qjsonobject.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qjsonvalue.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qcborvalue.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qdatetime.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qcalendar.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qlocale.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qcborcommon.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qregularexpression.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qurl.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/quuid.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QBuffer \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qbuffer.h \
 		release/moc_predefs.h \
 		C:/Qt/6.5.1/mingw_64/bin/moc.exe
 	C:\Qt\6.5.1\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Asus/OneDrive/Desktop/P2PShareFile/build-P2PShareFile-Desktop_Qt_6_5_1_MinGW_64_bit-Debug/release/moc_predefs.h -IC:/Qt/6.5.1/mingw_64/mkspecs/win32-g++ -IC:/Users/Asus/OneDrive/Desktop/P2PShareFile/P2PShareFile -IC:/Qt/6.5.1/mingw_64/include -IC:/Qt/6.5.1/mingw_64/include/QtWidgets -IC:/Qt/6.5.1/mingw_64/include/QtGui -IC:/Qt/6.5.1/mingw_64/include/QtSql -IC:/Qt/6.5.1/mingw_64/include/QtNetwork -IC:/Qt/6.5.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\P2PShareFile\peertopeer\localconnection.h -o release\moc_localconnection.cpp
@@ -2821,8 +2834,73 @@ release/moc_localserver.cpp: ../P2PShareFile/peertopeer/localserver.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qvarlengtharray.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/q20memory.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qvariant.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QJsonObject \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qjsonobject.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qjsonvalue.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qcborvalue.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qdatetime.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qcalendar.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qlocale.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qcborcommon.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qregularexpression.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qurl.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/quuid.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QBuffer \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qbuffer.h \
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/QTcpServer \
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/qtcpserver.h \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QMessageBox \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qmessagebox.h \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qtguiglobal.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qtgui-config.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qtguiexports.h \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qtwidgets-config.h \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qtwidgetsexports.h \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qdialog.h \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qwidget.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qwindowdefs.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qwindowdefs_win.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qmargins.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qaction.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qkeysequence.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qicon.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qsize.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qpixmap.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qpaintdevice.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qrect.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qpoint.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qcolor.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qrgb.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qrgba64.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qimage.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qpixelformat.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qtransform.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qpolygon.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qregion.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qline.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qpalette.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qbrush.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qfont.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qfontmetrics.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qfontinfo.h \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qsizepolicy.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qcursor.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qbitmap.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qevent.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qpointer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qeventpoint.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qvector2d.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qvectornd.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qpointingdevice.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qinputdevice.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qscreen.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QList \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QRect \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QSize \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QSizeF \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/QTransform \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qnativeinterface.h \
 		release/moc_predefs.h \
 		C:/Qt/6.5.1/mingw_64/bin/moc.exe
 	C:\Qt\6.5.1\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Asus/OneDrive/Desktop/P2PShareFile/build-P2PShareFile-Desktop_Qt_6_5_1_MinGW_64_bit-Debug/release/moc_predefs.h -IC:/Qt/6.5.1/mingw_64/mkspecs/win32-g++ -IC:/Users/Asus/OneDrive/Desktop/P2PShareFile/P2PShareFile -IC:/Qt/6.5.1/mingw_64/include -IC:/Qt/6.5.1/mingw_64/include/QtWidgets -IC:/Qt/6.5.1/mingw_64/include/QtGui -IC:/Qt/6.5.1/mingw_64/include/QtSql -IC:/Qt/6.5.1/mingw_64/include/QtNetwork -IC:/Qt/6.5.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\P2PShareFile\peertopeer\localserver.h -o release\moc_localserver.cpp
@@ -3189,6 +3267,23 @@ release/moc_fileresult.cpp: ../P2PShareFile/scence/fileresult.h \
 		../P2PShareFile/peertopeer/localconnection.h \
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/QTcpSocket \
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/qtcpsocket.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QJsonObject \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qjsonobject.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qjsonvalue.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qcborvalue.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qdatetime.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qcalendar.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qlocale.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qcborcommon.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qregularexpression.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/quuid.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QBuffer \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qbuffer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QJsonDocument \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qjsondocument.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QFile \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qfile.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qfiledevice.h \
 		release/moc_predefs.h \
 		C:/Qt/6.5.1/mingw_64/bin/moc.exe
 	C:\Qt\6.5.1\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Asus/OneDrive/Desktop/P2PShareFile/build-P2PShareFile-Desktop_Qt_6_5_1_MinGW_64_bit-Debug/release/moc_predefs.h -IC:/Qt/6.5.1/mingw_64/mkspecs/win32-g++ -IC:/Users/Asus/OneDrive/Desktop/P2PShareFile/P2PShareFile -IC:/Qt/6.5.1/mingw_64/include -IC:/Qt/6.5.1/mingw_64/include/QtWidgets -IC:/Qt/6.5.1/mingw_64/include/QtGui -IC:/Qt/6.5.1/mingw_64/include/QtSql -IC:/Qt/6.5.1/mingw_64/include/QtNetwork -IC:/Qt/6.5.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\P2PShareFile\scence\fileresult.h -o release\moc_fileresult.cpp
@@ -3416,6 +3511,35 @@ release/moc_mainwindow.cpp: ../P2PShareFile/scence/mainwindow.h \
 		../P2PShareFile/peertopeer/localserver.h \
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/QTcpServer \
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/qtcpserver.h \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QMessageBox \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qmessagebox.h \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qdialog.h \
+		../P2PShareFile/server/servercreatemessage.h \
+		../P2PShareFile/server/requestprocessing.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QTextStream \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QDir \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qdir.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qfileinfo.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QDateTime \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QThread \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qthread.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qdeadlinetimer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qelapsedtimer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtNetwork/QNetworkInterface \
+		C:/Qt/6.5.1/mingw_64/include/QtNetwork/qnetworkinterface.h \
+		../P2PShareFile/controller/logincontroller.h \
+		../P2PShareFile/query/userquery.h \
+		../P2PShareFile/controller/registercontroller.h \
+		../P2PShareFile/controller/filecontroller.h \
+		../P2PShareFile/query/filequery.h \
+		../P2PShareFile/message/auth/loginservermessage.h \
+		../P2PShareFile/message/servermessage.h \
+		../P2PShareFile/element/responsebody.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QJsonArray \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qjsonarray.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QStringList \
+		../P2PShareFile/message/auth/registerservermessage.h \
+		../P2PShareFile/message/file/fileservermessage.h \
 		release/moc_predefs.h \
 		C:/Qt/6.5.1/mingw_64/bin/moc.exe
 	C:\Qt\6.5.1\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Asus/OneDrive/Desktop/P2PShareFile/build-P2PShareFile-Desktop_Qt_6_5_1_MinGW_64_bit-Debug/release/moc_predefs.h -IC:/Qt/6.5.1/mingw_64/mkspecs/win32-g++ -IC:/Users/Asus/OneDrive/Desktop/P2PShareFile/P2PShareFile -IC:/Qt/6.5.1/mingw_64/include -IC:/Qt/6.5.1/mingw_64/include/QtWidgets -IC:/Qt/6.5.1/mingw_64/include/QtGui -IC:/Qt/6.5.1/mingw_64/include/QtSql -IC:/Qt/6.5.1/mingw_64/include/QtNetwork -IC:/Qt/6.5.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\P2PShareFile\scence\mainwindow.h -o release\moc_mainwindow.cpp
@@ -5767,12 +5891,36 @@ release/main.o: ../P2PShareFile/main.cpp ../P2PShareFile/scence/mainwindow.h \
 		../P2PShareFile/peertopeer/localserver.h \
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/QTcpServer \
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/qtcpserver.h \
-		../P2PShareFile/scence/loginwindow.h \
 		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QMessageBox \
 		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qmessagebox.h \
 		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qdialog.h \
+		../P2PShareFile/server/servercreatemessage.h \
+		../P2PShareFile/server/requestprocessing.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QTextStream \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QDir \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qdir.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qfileinfo.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QDateTime \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QThread \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qthread.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qdeadlinetimer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qelapsedtimer.h \
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/QNetworkInterface \
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/qnetworkinterface.h \
+		../P2PShareFile/controller/logincontroller.h \
+		../P2PShareFile/query/userquery.h \
+		../P2PShareFile/controller/registercontroller.h \
+		../P2PShareFile/controller/filecontroller.h \
+		../P2PShareFile/query/filequery.h \
+		../P2PShareFile/message/auth/loginservermessage.h \
+		../P2PShareFile/message/servermessage.h \
+		../P2PShareFile/element/responsebody.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QJsonArray \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qjsonarray.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QStringList \
+		../P2PShareFile/message/auth/registerservermessage.h \
+		../P2PShareFile/message/file/fileservermessage.h \
+		../P2PShareFile/scence/loginwindow.h \
 		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QApplication \
 		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qapplication.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qcoreapplication.h \
@@ -5785,9 +5933,6 @@ release/main.o: ../P2PShareFile/main.cpp ../P2PShareFile/scence/mainwindow.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qresultstore.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qfuture_impl.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qthreadpool.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qthread.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qdeadlinetimer.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qelapsedtimer.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qrunnable.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qexception.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qpromise.h \
@@ -5800,28 +5945,7 @@ release/main.o: ../P2PShareFile/main.cpp ../P2PShareFile/scence/mainwindow.h \
 		C:/Qt/6.5.1/mingw_64/include/QtSql/qtsqlglobal.h \
 		C:/Qt/6.5.1/mingw_64/include/QtSql/qtsql-config.h \
 		C:/Qt/6.5.1/mingw_64/include/QtSql/qtsqlexports.h \
-		../P2PShareFile/server/server.h \
-		../P2PShareFile/server/requestprocessing.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/QTextStream \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/QDir \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qdir.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qfileinfo.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/QDateTime \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/QThread \
-		../P2PShareFile/controller/logincontroller.h \
-		../P2PShareFile/query/userquery.h \
-		../P2PShareFile/controller/registercontroller.h \
-		../P2PShareFile/controller/filecontroller.h \
-		../P2PShareFile/query/filequery.h \
-		../P2PShareFile/message/auth/loginservermessage.h \
-		../P2PShareFile/message/servermessage.h \
-		../P2PShareFile/element/responsebody.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/QJsonArray \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qjsonarray.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/QStringList \
-		../P2PShareFile/server/servercreatemessage.h \
-		../P2PShareFile/message/auth/registerservermessage.h \
-		../P2PShareFile/message/file/fileservermessage.h
+		../P2PShareFile/server/server.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\P2PShareFile\main.cpp
 
 release/loginclientmessage.o: ../P2PShareFile/message/auth/loginclientmessage.cpp ../P2PShareFile/message/auth/loginclientmessage.h \
@@ -7090,7 +7214,20 @@ release/localconnection.o: ../P2PShareFile/peertopeer/localconnection.cpp ../P2P
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qhash.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qvarlengtharray.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/q20memory.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qvariant.h
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qvariant.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QJsonObject \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qjsonobject.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qjsonvalue.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qcborvalue.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qdatetime.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qcalendar.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qlocale.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qcborcommon.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qregularexpression.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qurl.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/quuid.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QBuffer \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qbuffer.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\localconnection.o ..\P2PShareFile\peertopeer\localconnection.cpp
 
 release/localserver.o: ../P2PShareFile/peertopeer/localserver.cpp ../P2PShareFile/peertopeer/localserver.h \
@@ -7208,8 +7345,73 @@ release/localserver.o: ../P2PShareFile/peertopeer/localserver.cpp ../P2PShareFil
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qvarlengtharray.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/q20memory.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qvariant.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QJsonObject \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qjsonobject.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qjsonvalue.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qcborvalue.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qdatetime.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qcalendar.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qlocale.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qcborcommon.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qregularexpression.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qurl.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/quuid.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QBuffer \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qbuffer.h \
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/QTcpServer \
-		C:/Qt/6.5.1/mingw_64/include/QtNetwork/qtcpserver.h
+		C:/Qt/6.5.1/mingw_64/include/QtNetwork/qtcpserver.h \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QMessageBox \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qmessagebox.h \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qtguiglobal.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qtgui-config.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qtguiexports.h \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qtwidgets-config.h \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qtwidgetsexports.h \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qdialog.h \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qwidget.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qwindowdefs.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qwindowdefs_win.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qmargins.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qaction.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qkeysequence.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qicon.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qsize.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qpixmap.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qpaintdevice.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qrect.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qpoint.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qcolor.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qrgb.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qrgba64.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qimage.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qpixelformat.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qtransform.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qpolygon.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qregion.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qline.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qpalette.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qbrush.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qfont.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qfontmetrics.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qfontinfo.h \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qsizepolicy.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qcursor.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qbitmap.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qevent.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qpointer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qeventpoint.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qvector2d.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qvectornd.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qpointingdevice.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qinputdevice.h \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/qscreen.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QList \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QRect \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QSize \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QSizeF \
+		C:/Qt/6.5.1/mingw_64/include/QtGui/QTransform \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qnativeinterface.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\localserver.o ..\P2PShareFile\peertopeer\localserver.cpp
 
 release/api.o: ../P2PShareFile/query/api.cpp 
@@ -7613,6 +7815,23 @@ release/fileresult.o: ../P2PShareFile/scence/fileresult.cpp ../P2PShareFile/scen
 		../P2PShareFile/peertopeer/localconnection.h \
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/QTcpSocket \
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/qtcpsocket.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QJsonObject \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qjsonobject.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qjsonvalue.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qcborvalue.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qdatetime.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qcalendar.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qlocale.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qcborcommon.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qregularexpression.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/quuid.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QBuffer \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qbuffer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QJsonDocument \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qjsondocument.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QFile \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qfile.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qfiledevice.h \
 		ui_fileresult.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\fileresult.o ..\P2PShareFile\scence\fileresult.cpp
 
@@ -7839,6 +8058,35 @@ release/mainwindow.o: ../P2PShareFile/scence/mainwindow.cpp ../P2PShareFile/scen
 		../P2PShareFile/peertopeer/localserver.h \
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/QTcpServer \
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/qtcpserver.h \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QMessageBox \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qmessagebox.h \
+		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qdialog.h \
+		../P2PShareFile/server/servercreatemessage.h \
+		../P2PShareFile/server/requestprocessing.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QTextStream \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QDir \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qdir.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qfileinfo.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QDateTime \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QThread \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qthread.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qdeadlinetimer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qelapsedtimer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtNetwork/QNetworkInterface \
+		C:/Qt/6.5.1/mingw_64/include/QtNetwork/qnetworkinterface.h \
+		../P2PShareFile/controller/logincontroller.h \
+		../P2PShareFile/query/userquery.h \
+		../P2PShareFile/controller/registercontroller.h \
+		../P2PShareFile/controller/filecontroller.h \
+		../P2PShareFile/query/filequery.h \
+		../P2PShareFile/message/auth/loginservermessage.h \
+		../P2PShareFile/message/servermessage.h \
+		../P2PShareFile/element/responsebody.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QJsonArray \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qjsonarray.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QStringList \
+		../P2PShareFile/message/auth/registerservermessage.h \
+		../P2PShareFile/message/file/fileservermessage.h \
 		../P2PShareFile/scence/ui_mainwindow.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/QVariant \
 		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QApplication \
@@ -7853,9 +8101,6 @@ release/mainwindow.o: ../P2PShareFile/scence/mainwindow.cpp ../P2PShareFile/scen
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qresultstore.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qfuture_impl.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qthreadpool.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qthread.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qdeadlinetimer.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qelapsedtimer.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qrunnable.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qexception.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/qpromise.h \
@@ -7886,15 +8131,8 @@ release/mainwindow.o: ../P2PShareFile/scence/mainwindow.cpp ../P2PShareFile/scen
 		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qtextedit.h \
 		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QFileDialog \
 		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qfiledialog.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qdir.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qfileinfo.h \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qdialog.h \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/QMessageBox \
-		C:/Qt/6.5.1/mingw_64/include/QtWidgets/qmessagebox.h \
 		C:/Qt/6.5.1/mingw_64/include/QtCore/QProcess \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qprocess.h \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/QJsonArray \
-		C:/Qt/6.5.1/mingw_64/include/QtCore/qjsonarray.h
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qprocess.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\P2PShareFile\scence\mainwindow.cpp
 
 release/registerwindow.o: ../P2PShareFile/scence/registerwindow.cpp ../P2PShareFile/scence/registerwindow.h \
@@ -8133,7 +8371,31 @@ release/registerwindow.o: ../P2PShareFile/scence/registerwindow.cpp ../P2PShareF
 		../P2PShareFile/peertopeer/localconnection.h \
 		../P2PShareFile/peertopeer/localserver.h \
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/QTcpServer \
-		C:/Qt/6.5.1/mingw_64/include/QtNetwork/qtcpserver.h
+		C:/Qt/6.5.1/mingw_64/include/QtNetwork/qtcpserver.h \
+		../P2PShareFile/server/servercreatemessage.h \
+		../P2PShareFile/server/requestprocessing.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QTextStream \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QDir \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qdir.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qfileinfo.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QDateTime \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QThread \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qthread.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qdeadlinetimer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qelapsedtimer.h \
+		../P2PShareFile/controller/logincontroller.h \
+		../P2PShareFile/query/userquery.h \
+		../P2PShareFile/controller/registercontroller.h \
+		../P2PShareFile/controller/filecontroller.h \
+		../P2PShareFile/query/filequery.h \
+		../P2PShareFile/message/auth/loginservermessage.h \
+		../P2PShareFile/message/servermessage.h \
+		../P2PShareFile/element/responsebody.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QJsonArray \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qjsonarray.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QStringList \
+		../P2PShareFile/message/auth/registerservermessage.h \
+		../P2PShareFile/message/file/fileservermessage.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\registerwindow.o ..\P2PShareFile\scence\registerwindow.cpp
 
 release/loginwindow.o: ../P2PShareFile/scence/loginwindow.cpp ../P2PShareFile/scence/loginwindow.h \
@@ -8375,6 +8637,30 @@ release/loginwindow.o: ../P2PShareFile/scence/loginwindow.cpp ../P2PShareFile/sc
 		../P2PShareFile/peertopeer/localserver.h \
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/QTcpServer \
 		C:/Qt/6.5.1/mingw_64/include/QtNetwork/qtcpserver.h \
+		../P2PShareFile/server/servercreatemessage.h \
+		../P2PShareFile/server/requestprocessing.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QTextStream \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QDir \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qdir.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qfileinfo.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QDateTime \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QThread \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qthread.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qdeadlinetimer.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qelapsedtimer.h \
+		../P2PShareFile/controller/logincontroller.h \
+		../P2PShareFile/query/userquery.h \
+		../P2PShareFile/controller/registercontroller.h \
+		../P2PShareFile/controller/filecontroller.h \
+		../P2PShareFile/query/filequery.h \
+		../P2PShareFile/message/auth/loginservermessage.h \
+		../P2PShareFile/message/servermessage.h \
+		../P2PShareFile/element/responsebody.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QJsonArray \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/qjsonarray.h \
+		C:/Qt/6.5.1/mingw_64/include/QtCore/QStringList \
+		../P2PShareFile/message/auth/registerservermessage.h \
+		../P2PShareFile/message/file/fileservermessage.h \
 		../P2PShareFile/scence/registerwindow.h \
 		../P2PShareFile/database/connection.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\loginwindow.o ..\P2PShareFile\scence\loginwindow.cpp

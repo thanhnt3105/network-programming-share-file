@@ -24,7 +24,7 @@ signals:
     void newLocalConnection(LocalConnection *connection);
 
 protected:
-    void incomingConnection(qintptr socketDescriptor);
+
 
 
 };

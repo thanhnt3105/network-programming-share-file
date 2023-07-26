@@ -3,6 +3,8 @@
 
 #include <QObject>
 #include <QTcpSocket>
+#include <QJsonObject>
+#include <QBuffer>
 class LocalConnection : public QTcpSocket
 {
     Q_OBJECT
