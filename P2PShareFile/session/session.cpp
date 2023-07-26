@@ -6,6 +6,16 @@ Session::Session(){
 
 }
 
+quint16 Session::getUserId() const
+{
+    return userId;
+}
+
+void Session::setUserId(quint16 newUserId)
+{
+    userId = newUserId;
+}
+
 QString Session::getUsername() const
 {
     return username;

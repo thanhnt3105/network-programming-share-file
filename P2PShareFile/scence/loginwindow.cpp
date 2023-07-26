@@ -52,7 +52,7 @@ void LoginWindow::handleLoginResponse(const QJsonDocument &response)
 {
     QString errorMsg;
     QString username;
-    quint64 id;
+    QString id;
     if (!response.isNull() && response.isObject()) {
 
         QJsonObject jsonObject = response.object();
@@ -65,10 +65,12 @@ void LoginWindow::handleLoginResponse(const QJsonDocument &response)
         if (jsonObject.contains("info") && jsonObject["info"].isString()) {
             QString infoString = jsonObject["info"].toString();
             QJsonObject infoObject = QJsonDocument::fromJson(infoString.toUtf8()).object();
-
             // Lấy giá trị của key "username" từ QJsonObject "infoObject"
             if (infoObject.contains("username") && infoObject["username"].isString()) {
                 username = infoObject["username"].toString();
+            }
+            if (infoObject.contains("id")) {
+                id = infoObject["id"].toString();
             }
         }
     }
@@ -79,6 +81,7 @@ void LoginWindow::handleLoginResponse(const QJsonDocument &response)
     }
     else {
        Session::getInstance()->setUsername(username);
+       Session::getInstance()->setUserId(id.toInt());
        quint16 port = ui->portSpinBox->value();
        QString host = ui->HostComboBox->currentText();
 

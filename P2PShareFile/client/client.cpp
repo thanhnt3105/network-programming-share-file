@@ -100,6 +100,14 @@ void Client::uploadFile(QString fileName, QString filePath,quint64 userId)
     sendRequest(fileMsg->toString());
 }
 
+void Client::getFileByUserId(quint16 userId)
+{
+    FileClientMessage*fileMsg = new FileClientMessage(userId);
+    qDebug() << "Send: " << fileMsg->toString();
+    sendRequest(fileMsg->toString());
+
+}
+
 void Client::login(QString username, QString password,QString host, quint16 port) {
     LoginClientMessage* clientMsg = new LoginClientMessage(username, password,host,port);
     sendRequest(clientMsg->toString());

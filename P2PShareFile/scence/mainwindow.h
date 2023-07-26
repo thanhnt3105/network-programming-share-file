@@ -17,6 +17,7 @@
 #include <peertopeer/localserver.h>
 #include <server/servercreatemessage.h>
 #include <QTimer>
+#include <scence/fileinfodialog.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -53,6 +54,7 @@ private slots:
     void on_uploadButton_clicked();
 
     void handleUploadResponse(const QJsonDocument& response);
+    void handleGetOwnFileResponse(const QJsonDocument& response);
     void onReadyRead();
     void onDisconnected();
     void onNewConnection();
@@ -64,6 +66,8 @@ private slots:
     void updateClientProgress(qint64); //发送数据，更新进度条
 
     void updateServerProgress(); //接收数据，更新进度条
+
+    void on_myFilePushButton_clicked();
 
 private:
     Ui::MainWindow *ui;
@@ -88,6 +92,7 @@ private:
     QByteArray inBlock;   //数据缓冲区
 
     QLabel* currentUserLabel;
+    FileInfoDialog *fileInfoDialog;
 };
 
 #endif // MAINWINDOW_H

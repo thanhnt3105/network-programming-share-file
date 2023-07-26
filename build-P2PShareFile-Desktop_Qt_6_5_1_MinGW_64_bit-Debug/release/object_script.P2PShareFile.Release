@@ -23,6 +23,7 @@ release/localserver.o
 release/api.o
 release/filequery.o
 release/userquery.o
+release/fileinfodialog.o
 release/fileresult.o
 release/mainwindow.o
 release/registerwindow.o
@@ -56,6 +57,7 @@ release/moc_localconnection.o
 release/moc_localserver.o
 release/moc_filequery.o
 release/moc_userquery.o
+release/moc_fileinfodialog.o
 release/moc_fileresult.o
 release/moc_mainwindow.o
 release/moc_registerwindow.o

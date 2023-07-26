@@ -59,11 +59,12 @@ static constexpr auto qt_meta_stringdata_CLASSClientENDCLASS = QtMocHelpers::str
     "fileName",
     "uploadFile",
     "filePath",
-    "userId"
+    "userId",
+    "getFileByUserId"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSClientENDCLASS_t {
-    uint offsetsAndSizes[44];
+    uint offsetsAndSizes[46];
     char stringdata0[7];
     char stringdata1[9];
     char stringdata2[1];
@@ -86,6 +87,7 @@ struct qt_meta_stringdata_CLASSClientENDCLASS_t {
     char stringdata19[11];
     char stringdata20[9];
     char stringdata21[7];
+    char stringdata22[16];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSClientENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -112,7 +114,8 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSClientENDCLASS_t qt_meta_string
         QT_MOC_LITERAL(162, 8),  // "fileName"
         QT_MOC_LITERAL(171, 10),  // "uploadFile"
         QT_MOC_LITERAL(182, 8),  // "filePath"
-        QT_MOC_LITERAL(191, 6)   // "userId"
+        QT_MOC_LITERAL(191, 6),  // "userId"
+        QT_MOC_LITERAL(198, 15)   // "getFileByUserId"
     },
     "Client",
     "Finished",
@@ -135,7 +138,8 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSClientENDCLASS_t qt_meta_string
     "fileName",
     "uploadFile",
     "filePath",
-    "userId"
+    "userId",
+    "getFileByUserId"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -147,7 +151,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSClientENDCLASS[] = {
       11,       // revision
        0,       // classname
        0,    0, // classinfo
-      11,   14, // methods
+      12,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -155,19 +159,20 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSClientENDCLASS[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   80,    2, 0x06,    1 /* Public */,
+       1,    1,   86,    2, 0x06,    1 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       4,    0,   83,    2, 0x0a,    3 /* Public */,
-       5,    0,   84,    2, 0x0a,    4 /* Public */,
-       6,    0,   85,    2, 0x0a,    5 /* Public */,
-       7,    0,   86,    2, 0x0a,    6 /* Public */,
-       8,    4,   87,    2, 0x0a,    7 /* Public */,
-      13,    2,   96,    2, 0x0a,   12 /* Public */,
-      14,    1,  101,    2, 0x0a,   15 /* Public */,
-      16,    0,  104,    2, 0x0a,   17 /* Public */,
-      17,    1,  105,    2, 0x0a,   18 /* Public */,
-      19,    3,  108,    2, 0x0a,   20 /* Public */,
+       4,    0,   89,    2, 0x0a,    3 /* Public */,
+       5,    0,   90,    2, 0x0a,    4 /* Public */,
+       6,    0,   91,    2, 0x0a,    5 /* Public */,
+       7,    0,   92,    2, 0x0a,    6 /* Public */,
+       8,    4,   93,    2, 0x0a,    7 /* Public */,
+      13,    2,  102,    2, 0x0a,   12 /* Public */,
+      14,    1,  107,    2, 0x0a,   15 /* Public */,
+      16,    0,  110,    2, 0x0a,   17 /* Public */,
+      17,    1,  111,    2, 0x0a,   18 /* Public */,
+      19,    3,  114,    2, 0x0a,   20 /* Public */,
+      22,    1,  121,    2, 0x0a,   24 /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QJsonDocument,    3,
@@ -183,6 +188,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSClientENDCLASS[] = {
     QMetaType::Void,
     QMetaType::Void, QMetaType::QString,   18,
     QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::ULongLong,   18,   20,   21,
+    QMetaType::Void, QMetaType::UShort,   21,
 
        0        // eod
 };
@@ -229,7 +235,10 @@ Q_CONSTINIT const QMetaObject Client::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
-        QtPrivate::TypeAndForceComplete<quint64, std::false_type>
+        QtPrivate::TypeAndForceComplete<quint64, std::false_type>,
+        // method 'getFileByUserId'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<quint16, std::false_type>
     >,
     nullptr
 } };
@@ -251,6 +260,7 @@ void Client::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         case 8: _t->getAllFile(); break;
         case 9: _t->searchFile((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 10: _t->uploadFile((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<quint64>>(_a[3]))); break;
+        case 11: _t->getFileByUserId((*reinterpret_cast< std::add_pointer_t<quint16>>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -284,13 +294,13 @@ int Client::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 11)
+        if (_id < 12)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 11;
+        _id -= 12;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 11)
+        if (_id < 12)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 11;
+        _id -= 12;
     }
     return _id;
 }

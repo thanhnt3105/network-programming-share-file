@@ -44,6 +44,7 @@ public slots:
     void getAllFile();
     void searchFile(QString fileName);
     void uploadFile(QString fileName, QString filePath,quint64 userId);
+    void getFileByUserId(quint16 userId);
 //    void logout(quint64 id, QString username);
 signals:
     void Finished(const QJsonDocument& response);

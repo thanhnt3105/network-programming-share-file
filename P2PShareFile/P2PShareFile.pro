@@ -34,6 +34,7 @@ SOURCES += \
     query/api.cpp \
     query/filequery.cpp \
     query/userquery.cpp \
+    scence/fileinfodialog.cpp \
     scence/fileresult.cpp \
     scence/mainwindow.cpp \
     scence/registerwindow.cpp \
@@ -69,6 +70,7 @@ HEADERS += \
     query/api.h \
     query/filequery.h \
     query/userquery.h \
+    scence/fileinfodialog.h \
     scence/fileresult.h \
     scence/mainwindow.h \
     scence/registerwindow.h \

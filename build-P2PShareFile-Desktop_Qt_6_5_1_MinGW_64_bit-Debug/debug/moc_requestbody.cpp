@@ -56,11 +56,12 @@ static constexpr auto qt_meta_stringdata_CLASSRequestBodyENDCLASS = QtMocHelpers
     "createSearchAllFilesBody",
     "createUploadFileBody",
     "userId",
-    "filePath"
+    "filePath",
+    "createGetFileByUserIdBody"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSRequestBodyENDCLASS_t {
-    uint offsetsAndSizes[38];
+    uint offsetsAndSizes[40];
     char stringdata0[12];
     char stringdata1[15];
     char stringdata2[1];
@@ -80,6 +81,7 @@ struct qt_meta_stringdata_CLASSRequestBodyENDCLASS_t {
     char stringdata16[21];
     char stringdata17[7];
     char stringdata18[9];
+    char stringdata19[26];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSRequestBodyENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -103,7 +105,8 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSRequestBodyENDCLASS_t qt_meta_s
         QT_MOC_LITERAL(161, 24),  // "createSearchAllFilesBody"
         QT_MOC_LITERAL(186, 20),  // "createUploadFileBody"
         QT_MOC_LITERAL(207, 6),  // "userId"
-        QT_MOC_LITERAL(214, 8)   // "filePath"
+        QT_MOC_LITERAL(214, 8),  // "filePath"
+        QT_MOC_LITERAL(223, 25)   // "createGetFileByUserIdBody"
     },
     "RequestBody",
     "getRequestBody",
@@ -123,7 +126,8 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSRequestBodyENDCLASS_t qt_meta_s
     "createSearchAllFilesBody",
     "createUploadFileBody",
     "userId",
-    "filePath"
+    "filePath",
+    "createGetFileByUserIdBody"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -135,7 +139,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSRequestBodyENDCLASS[] = {
       11,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
+       9,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -143,14 +147,15 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSRequestBodyENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   62,    2, 0x0a,    1 /* Public */,
-       3,    1,   63,    2, 0x0a,    2 /* Public */,
-       5,    4,   66,    2, 0x0a,    4 /* Public */,
-      10,    2,   75,    2, 0x0a,    9 /* Public */,
-      12,    2,   80,    2, 0x0a,   12 /* Public */,
-      13,    1,   85,    2, 0x0a,   15 /* Public */,
-      15,    0,   88,    2, 0x0a,   17 /* Public */,
-      16,    3,   89,    2, 0x0a,   18 /* Public */,
+       1,    0,   68,    2, 0x0a,    1 /* Public */,
+       3,    1,   69,    2, 0x0a,    2 /* Public */,
+       5,    4,   72,    2, 0x0a,    4 /* Public */,
+      10,    2,   81,    2, 0x0a,    9 /* Public */,
+      12,    2,   86,    2, 0x0a,   12 /* Public */,
+      13,    1,   91,    2, 0x0a,   15 /* Public */,
+      15,    0,   94,    2, 0x0a,   17 /* Public */,
+      16,    3,   95,    2, 0x0a,   18 /* Public */,
+      19,    1,  102,    2, 0x0a,   22 /* Public */,
 
  // slots: parameters
     QMetaType::QJsonObject,
@@ -161,6 +166,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSRequestBodyENDCLASS[] = {
     QMetaType::Void, QMetaType::QString,   14,
     QMetaType::Void,
     QMetaType::Void, QMetaType::ULongLong, QMetaType::QString, QMetaType::QString,   17,   14,   18,
+    QMetaType::Void, QMetaType::UShort,   17,
 
        0        // eod
 };
@@ -202,7 +208,10 @@ Q_CONSTINIT const QMetaObject RequestBody::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<quint64, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'createGetFileByUserIdBody'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<quint16, std::false_type>
     >,
     nullptr
 } };
@@ -222,6 +231,7 @@ void RequestBody::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 5: _t->createSearchFileBody((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 6: _t->createSearchAllFilesBody(); break;
         case 7: _t->createUploadFileBody((*reinterpret_cast< std::add_pointer_t<quint64>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3]))); break;
+        case 8: _t->createGetFileByUserIdBody((*reinterpret_cast< std::add_pointer_t<quint16>>(_a[1]))); break;
         default: ;
         }
     }
@@ -246,13 +256,13 @@ int RequestBody::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 9;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 8)
+        if (_id < 9)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 8;
+        _id -= 9;
     }
     return _id;
 }

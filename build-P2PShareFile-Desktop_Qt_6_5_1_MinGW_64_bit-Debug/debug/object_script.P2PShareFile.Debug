@@ -23,6 +23,7 @@ debug/localserver.o
 debug/api.o
 debug/filequery.o
 debug/userquery.o
+debug/fileinfodialog.o
 debug/fileresult.o
 debug/mainwindow.o
 debug/registerwindow.o
@@ -56,6 +57,7 @@ debug/moc_localconnection.o
 debug/moc_localserver.o
 debug/moc_filequery.o
 debug/moc_userquery.o
+debug/moc_fileinfodialog.o
 debug/moc_fileresult.o
 debug/moc_mainwindow.o
 debug/moc_registerwindow.o

@@ -56,3 +56,9 @@ void RequestBody::createUploadFileBody(quint64 userId, QString fileName, QString
     this->requestBody.insert("filePath",filePath);
     this->requestBody.insert("userId",static_cast<qint64>(userId));
 }
+
+void RequestBody::createGetFileByUserIdBody(quint16 userId)
+{
+    this->requestBody = QJsonObject();
+    this->requestBody.insert("userId",static_cast<quint16>(userId));
+}

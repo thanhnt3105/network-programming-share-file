@@ -23,6 +23,7 @@ public slots:
     void createSearchFileBody(QString fileName);
     void createSearchAllFilesBody();
     void createUploadFileBody(quint64 userId, QString fileName, QString filePath);
+    void createGetFileByUserIdBody(quint16 userId);
 
 signals:
 

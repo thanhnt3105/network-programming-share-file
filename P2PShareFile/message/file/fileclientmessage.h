@@ -12,6 +12,7 @@ public:
     explicit FileClientMessage(QObject *parent = nullptr);
     explicit FileClientMessage(QString fileName, QObject *parent = nullptr);
     explicit FileClientMessage(QString fileName,QString filePath, quint64 userId, QObject *parent = nullptr);
+    explicit FileClientMessage(quint16 userId, QObject *parent = nullptr);
 
 signals:
 

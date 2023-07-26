@@ -22,4 +22,11 @@ FileClientMessage::FileClientMessage(QString fileName, QString filePath, quint64
     this->finalizeMessageObject();
 }
 
+FileClientMessage::FileClientMessage(quint16 userId, QObject *parent):ClientMessage{parent}
+{
+    this->addCommandCode(command->toCommand("GETFILEBYUSERID"));
+    this->requestBody->createGetFileByUserIdBody(userId);
+    this->finalizeMessageObject();
+}
+
 

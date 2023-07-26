@@ -33,6 +33,7 @@ public:
     QLabel *label;
     QLineEdit *fileNameLineEdit;
     QPushButton *searchButton;
+    QPushButton *myFilePushButton;
     QGroupBox *groupBox_3;
     QScrollArea *scrollArea_5;
     QWidget *scrollAreaWidgetContents_14;
@@ -65,7 +66,10 @@ public:
         fileNameLineEdit->setGeometry(QRect(70, 60, 141, 21));
         searchButton = new QPushButton(groupBox);
         searchButton->setObjectName("searchButton");
-        searchButton->setGeometry(QRect(70, 110, 81, 32));
+        searchButton->setGeometry(QRect(10, 110, 81, 32));
+        myFilePushButton = new QPushButton(groupBox);
+        myFilePushButton->setObjectName("myFilePushButton");
+        myFilePushButton->setGeometry(QRect(120, 110, 83, 29));
         groupBox_3 = new QGroupBox(centralwidget);
         groupBox_3->setObjectName("groupBox_3");
         groupBox_3->setGeometry(QRect(270, 20, 381, 241));
@@ -130,6 +134,7 @@ public:
         groupBox->setTitle(QCoreApplication::translate("MainWindow", "Search file", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Name", nullptr));
         searchButton->setText(QCoreApplication::translate("MainWindow", "Search", nullptr));
+        myFilePushButton->setText(QCoreApplication::translate("MainWindow", "My File", nullptr));
         groupBox_3->setTitle(QCoreApplication::translate("MainWindow", "File Available", nullptr));
         groupBox_4->setTitle(QCoreApplication::translate("MainWindow", "Information", nullptr));
         groupBox_2->setTitle(QCoreApplication::translate("MainWindow", "Share File", nullptr));

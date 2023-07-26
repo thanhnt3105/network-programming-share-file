@@ -10,7 +10,7 @@
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow),currentUserLabel(nullptr)
+    , ui(new Ui::MainWindow),currentUserLabel(nullptr),fileInfoDialog(nullptr)
 {
     ui->setupUi(this);
     this->client = new Client();
@@ -114,7 +114,7 @@ void MainWindow::handleGetFileResponse(const QJsonDocument &response)
     if(errorMsg.compare("file not found")==0) {
         QMessageBox::critical(nullptr, "Error", "Can not find your file");
     } else {
-        QMessageBox::critical(nullptr, "Error", "File found!");
+
     }
 }
 
@@ -159,7 +159,38 @@ void MainWindow::handleUploadResponse(const QJsonDocument &response)
     if(errorMsg.compare("file not found")==0) {
         QMessageBox::critical(nullptr, "Error", "Can not find your file");
     } else {
-        QMessageBox::critical(nullptr, "Error", "Upload file successfully");
+        QMessageBox::critical(nullptr, "Success", "Upload file successfully");
+    }
+}
+
+void MainWindow::handleGetOwnFileResponse(const QJsonDocument &response)
+{
+    qDebug() <<"response"<<response;
+    QString errorMsg;
+    QJsonArray fileArrayData;
+    if (!response.isNull() && response.isObject()) {
+        QJsonObject jsonObject = response.object();
+        if (jsonObject.contains("command_code") && jsonObject["command_code"].isString()) {
+            if(jsonObject["command_code"].toString().compare("GETFILEBYUSERID")!=0) return;
+        }
+        if (jsonObject.contains("error") && jsonObject["error"].isString()) {
+            errorMsg = jsonObject["error"].toString();
+        }
+        if (jsonObject.contains("info") && jsonObject["info"].isString()) {
+            QString infoString = jsonObject["info"].toString();
+            QJsonObject infoObject = QJsonDocument::fromJson(infoString.toUtf8()).object();
+            if(infoObject.contains("files")&& infoObject["files"].isArray()){
+                QJsonArray fileArray = infoObject.value("files").toArray();
+                fileArrayData=fileArray;
+            }
+        }
+    }
+    if(errorMsg.compare("cannot find your files")==0) {
+        QMessageBox::critical(nullptr, "Error", "Can not find your files");
+    }else{
+        qDebug() << "fileArrayData size:" << fileArrayData.size();
+        fileInfoDialog = new FileInfoDialog(fileArrayData);
+        fileInfoDialog->show();
     }
 }
 
@@ -310,5 +341,19 @@ void MainWindow::displayError(QAbstractSocket::SocketError)
 void MainWindow::updateFileList()
 {
 //    this->client->
+}
+
+
+//void MainWindow::on_myFilePushButton_clicked()
+//{
+
+//}
+
+
+void MainWindow::on_myFilePushButton_clicked()
+{
+        qDebug()<<"Session::getInstance()->getUserId()"<<Session::getInstance()->getUserId();
+        this->client->getFileByUserId(Session::getInstance()->getUserId());
+        connect(client, &Client::Finished, this, &MainWindow::handleGetOwnFileResponse);
 }
 

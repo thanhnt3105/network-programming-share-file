@@ -52,7 +52,7 @@
     <widget class="QPushButton" name="searchButton">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>10</x>
        <y>110</y>
        <width>81</width>
        <height>32</height>
@@ -60,6 +60,19 @@
      </property>
      <property name="text">
       <string>Search</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="myFilePushButton">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>110</y>
+       <width>83</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>My File</string>
      </property>
     </widget>
    </widget>
