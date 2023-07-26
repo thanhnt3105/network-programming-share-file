@@ -38,7 +38,7 @@ public slots:
     void onConnected();
     void onReadyRead();
     void onDisconnected();
-    void login(QString username, QString password);
+    void login(QString username, QString password,QString host, quint16 port);
     void registers(QString username, QString password);
     void sendRequest(QString strMsgToSend);
     void getAllFile();

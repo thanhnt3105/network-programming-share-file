@@ -13,6 +13,8 @@
 #include <QVBoxLayout>
 #include <scence/fileresult.h>
 #include <QVector>
+#include <session/session.h>
+#include <peertopeer/localserver.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -25,9 +27,11 @@ class MainWindow : public QMainWindow
 private:
     File*file;
     FileResult * fileResult;
+    LocalServer* localServer;
 
 public:
     MainWindow(QWidget *parent = nullptr);
+    MainWindow(QString host,quint16 port, QWidget *parent = nullptr);
     ~MainWindow();
 
     Client *getClientCore() const;
@@ -46,6 +50,9 @@ private slots:
     void on_uploadButton_clicked();
 
     void handleUploadResponse(const QJsonDocument& response);;
+
+public slots:
+    void handleNewConnection(LocalConnection*);
 
 private:
     Ui::MainWindow *ui;

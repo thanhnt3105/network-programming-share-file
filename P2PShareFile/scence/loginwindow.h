@@ -6,6 +6,8 @@
 #include <entity/user.h>
 #include <client/client.h>
 #include <QDebug>
+#include <QNetworkInterface>
+#include <session/session.h>
 
 namespace Ui {
 class LoginWindow;

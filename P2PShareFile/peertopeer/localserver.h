@@ -1,28 +1,32 @@
-//#ifndef LOCALSERVER_H
-//#define LOCALSERVER_H
+#ifndef LOCALSERVER_H
+#define LOCALSERVER_H
 
-//#include "header.h"
-//#include "./clientconnection/localconnection.h"
-//#include <QObject>
+#include <peertopeer/localconnection.h>
+#include <QObject>
+#include <QTcpServer>
+#include <QMessageBox>
 
-//class LocalServer : public QTcpServer
-//{
-//    Q_OBJECT
-//public:
-//    explicit LocalServer(QObject *parent = 0);
+class LocalServer : public QTcpServer
+{
+    Q_OBJECT
 
-//    void setLocalServerInfo(QHostAddress &ip, int &port);
-//    bool startServer();
+private:
+    QHostAddress myIp;
+    int myPort;
 
-//signals:
-//    void newLocalConnection(LocalConnection *connection);
+public:
+    explicit LocalServer(QObject *parent = 0);
 
-//protected:
-//    void incomingConnection(qintptr socketDescriptor);
+    void setLocalServerInfo(QHostAddress &ip, int port);
+    bool startServer();
 
-//private:
-//    QHostAddress myIp;
-//    int myPort;
-//};
+signals:
+    void newLocalConnection(LocalConnection *connection);
 
-//#endif // LOCALSERVER_H
+protected:
+    void incomingConnection(qintptr socketDescriptor);
+
+
+};
+
+#endif // LOCALSERVER_H

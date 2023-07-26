@@ -49,6 +49,8 @@ static constexpr auto qt_meta_stringdata_CLASSClientENDCLASS = QtMocHelpers::str
     "login",
     "username",
     "password",
+    "host",
+    "port",
     "registers",
     "sendRequest",
     "strMsgToSend",
@@ -61,7 +63,7 @@ static constexpr auto qt_meta_stringdata_CLASSClientENDCLASS = QtMocHelpers::str
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSClientENDCLASS_t {
-    uint offsetsAndSizes[40];
+    uint offsetsAndSizes[44];
     char stringdata0[7];
     char stringdata1[9];
     char stringdata2[1];
@@ -73,15 +75,17 @@ struct qt_meta_stringdata_CLASSClientENDCLASS_t {
     char stringdata8[6];
     char stringdata9[9];
     char stringdata10[9];
-    char stringdata11[10];
-    char stringdata12[12];
-    char stringdata13[13];
-    char stringdata14[11];
-    char stringdata15[11];
-    char stringdata16[9];
+    char stringdata11[5];
+    char stringdata12[5];
+    char stringdata13[10];
+    char stringdata14[12];
+    char stringdata15[13];
+    char stringdata16[11];
     char stringdata17[11];
     char stringdata18[9];
-    char stringdata19[7];
+    char stringdata19[11];
+    char stringdata20[9];
+    char stringdata21[7];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSClientENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -98,15 +102,17 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSClientENDCLASS_t qt_meta_string
         QT_MOC_LITERAL(71, 5),  // "login"
         QT_MOC_LITERAL(77, 8),  // "username"
         QT_MOC_LITERAL(86, 8),  // "password"
-        QT_MOC_LITERAL(95, 9),  // "registers"
-        QT_MOC_LITERAL(105, 11),  // "sendRequest"
-        QT_MOC_LITERAL(117, 12),  // "strMsgToSend"
-        QT_MOC_LITERAL(130, 10),  // "getAllFile"
-        QT_MOC_LITERAL(141, 10),  // "searchFile"
-        QT_MOC_LITERAL(152, 8),  // "fileName"
-        QT_MOC_LITERAL(161, 10),  // "uploadFile"
-        QT_MOC_LITERAL(172, 8),  // "filePath"
-        QT_MOC_LITERAL(181, 6)   // "userId"
+        QT_MOC_LITERAL(95, 4),  // "host"
+        QT_MOC_LITERAL(100, 4),  // "port"
+        QT_MOC_LITERAL(105, 9),  // "registers"
+        QT_MOC_LITERAL(115, 11),  // "sendRequest"
+        QT_MOC_LITERAL(127, 12),  // "strMsgToSend"
+        QT_MOC_LITERAL(140, 10),  // "getAllFile"
+        QT_MOC_LITERAL(151, 10),  // "searchFile"
+        QT_MOC_LITERAL(162, 8),  // "fileName"
+        QT_MOC_LITERAL(171, 10),  // "uploadFile"
+        QT_MOC_LITERAL(182, 8),  // "filePath"
+        QT_MOC_LITERAL(191, 6)   // "userId"
     },
     "Client",
     "Finished",
@@ -119,6 +125,8 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSClientENDCLASS_t qt_meta_string
     "login",
     "username",
     "password",
+    "host",
+    "port",
     "registers",
     "sendRequest",
     "strMsgToSend",
@@ -154,12 +162,12 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSClientENDCLASS[] = {
        5,    0,   84,    2, 0x0a,    4 /* Public */,
        6,    0,   85,    2, 0x0a,    5 /* Public */,
        7,    0,   86,    2, 0x0a,    6 /* Public */,
-       8,    2,   87,    2, 0x0a,    7 /* Public */,
-      11,    2,   92,    2, 0x0a,   10 /* Public */,
-      12,    1,   97,    2, 0x0a,   13 /* Public */,
-      14,    0,  100,    2, 0x0a,   15 /* Public */,
-      15,    1,  101,    2, 0x0a,   16 /* Public */,
-      17,    3,  104,    2, 0x0a,   18 /* Public */,
+       8,    4,   87,    2, 0x0a,    7 /* Public */,
+      13,    2,   96,    2, 0x0a,   12 /* Public */,
+      14,    1,  101,    2, 0x0a,   15 /* Public */,
+      16,    0,  104,    2, 0x0a,   17 /* Public */,
+      17,    1,  105,    2, 0x0a,   18 /* Public */,
+      19,    3,  108,    2, 0x0a,   20 /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QJsonDocument,    3,
@@ -169,12 +177,12 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSClientENDCLASS[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::UShort,    9,   10,   11,   12,
     QMetaType::Void, QMetaType::QString, QMetaType::QString,    9,   10,
-    QMetaType::Void, QMetaType::QString, QMetaType::QString,    9,   10,
-    QMetaType::Void, QMetaType::QString,   13,
+    QMetaType::Void, QMetaType::QString,   15,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,   16,
-    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::ULongLong,   16,   18,   19,
+    QMetaType::Void, QMetaType::QString,   18,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::ULongLong,   18,   20,   21,
 
        0        // eod
 };
@@ -203,6 +211,8 @@ Q_CONSTINIT const QMetaObject Client::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<quint16, std::false_type>,
         // method 'registers'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
@@ -235,7 +245,7 @@ void Client::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         case 2: _t->onConnected(); break;
         case 3: _t->onReadyRead(); break;
         case 4: _t->onDisconnected(); break;
-        case 5: _t->login((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
+        case 5: _t->login((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<quint16>>(_a[4]))); break;
         case 6: _t->registers((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
         case 7: _t->sendRequest((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 8: _t->getAllFile(); break;

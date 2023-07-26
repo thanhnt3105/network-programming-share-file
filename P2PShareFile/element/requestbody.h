@@ -17,7 +17,7 @@ public slots:
     QJsonObject getRequestBody();
     void setRequestBody(QJsonObject body);
 
-    void createLoginBody(QString username, QString password);
+    void createLoginBody(QString username, QString password,QString host, quint16 port);
     void createLogoutBody(quint64 id, QString username);
     void createRegisterBody(QString username, QString password);
     void createSearchFileBody(QString fileName);

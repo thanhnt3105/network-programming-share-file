@@ -31,6 +31,7 @@ release/connectioninfor.o
 release/requestprocessing.o
 release/server.o
 release/servercreatemessage.o
+release/session.o
 release/qrc_resouce.o
 release/moc_client.o
 release/moc_filecontroller.o

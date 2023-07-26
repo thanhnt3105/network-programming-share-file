@@ -15,6 +15,14 @@ LoginWindow::LoginWindow(QWidget *parent) :
     ui->setupUi(this);
     this->client = new Client();
     this->client->start();
+    this->ui->portSpinBox->setRange(1024, 65535);
+    this->ui->portSpinBox->setValue(9001);
+    QList<QHostAddress> list = QNetworkInterface::allAddresses();
+    foreach( QHostAddress address, list )
+    {
+        if(address.protocol() == QAbstractSocket::IPv4Protocol)
+            this->ui->HostComboBox->addItem(address.toString());
+    }
 }
 
 LoginWindow::~LoginWindow()
@@ -27,7 +35,9 @@ void LoginWindow::on_LoginPushButton_clicked()
 {
     QString username = ui->usernameLineEdit->text();
     QString password = ui->passLineEdit->text();
-    this->client->login(username,password);
+    quint16 port = ui->portSpinBox->value();
+    QString host = ui->HostComboBox->currentText();
+    this->client->login(username,password,host,port);
     connect(client, &Client::Finished, this, &LoginWindow::handleLoginResponse);
 }
 
@@ -64,8 +74,15 @@ void LoginWindow::handleLoginResponse(const QJsonDocument &response)
     }
     if(errorMsg.compare("invalid username")==0 || errorMsg.compare("invalid password")==0) {
        QMessageBox::critical(nullptr, "Error", "Invalid Credentials");
-    } else {
-       MainWindow * mainWindow = new MainWindow();
+    } else if(errorMsg.compare("invalid port")==0) {
+       QMessageBox::critical(nullptr, "Error", "Invalid Port! Please choose another port!");
+    }
+    else {
+       Session::getInstance()->setUsername(username);
+       quint16 port = ui->portSpinBox->value();
+       QString host = ui->HostComboBox->currentText();
+
+       MainWindow * mainWindow = new MainWindow(host,port);
        this->disconnectSignal();
        mainWindow->show();
        this->close();

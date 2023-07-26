@@ -14,11 +14,13 @@ void RequestBody::setRequestBody(QJsonObject body) {
     this->requestBody = body;
 }
 
-void RequestBody::createLoginBody(QString username, QString password) {
+void RequestBody::createLoginBody(QString username, QString password,QString host, quint16 port) {
     this->requestBody = QJsonObject();
 
     this->requestBody.insert("username", username);
     this->requestBody.insert("password", password);
+    this->requestBody.insert("host",host);
+    this->requestBody.insert("port",port);
 }
 
 void RequestBody::createLogoutBody(quint64 id, QString username) {

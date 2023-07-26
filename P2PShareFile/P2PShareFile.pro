@@ -41,7 +41,8 @@ SOURCES += \
     server/connectioninfor.cpp \
     server/requestprocessing.cpp \
     server/server.cpp \
-    server/servercreatemessage.cpp
+    server/servercreatemessage.cpp \
+    session/session.cpp
 
 HEADERS += \
     client/client.h \
@@ -75,7 +76,8 @@ HEADERS += \
     server/connectioninfor.h \
     server/requestprocessing.h \
     server/server.h \
-    server/servercreatemessage.h
+    server/servercreatemessage.h \
+    session/session.h
 
 FORMS += \
     scence/fileresult.ui \

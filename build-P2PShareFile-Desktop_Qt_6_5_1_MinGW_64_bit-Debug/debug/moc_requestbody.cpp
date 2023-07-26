@@ -46,6 +46,8 @@ static constexpr auto qt_meta_stringdata_CLASSRequestBodyENDCLASS = QtMocHelpers
     "createLoginBody",
     "username",
     "password",
+    "host",
+    "port",
     "createLogoutBody",
     "id",
     "createRegisterBody",
@@ -58,7 +60,7 @@ static constexpr auto qt_meta_stringdata_CLASSRequestBodyENDCLASS = QtMocHelpers
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSRequestBodyENDCLASS_t {
-    uint offsetsAndSizes[34];
+    uint offsetsAndSizes[38];
     char stringdata0[12];
     char stringdata1[15];
     char stringdata2[1];
@@ -67,15 +69,17 @@ struct qt_meta_stringdata_CLASSRequestBodyENDCLASS_t {
     char stringdata5[16];
     char stringdata6[9];
     char stringdata7[9];
-    char stringdata8[17];
-    char stringdata9[3];
-    char stringdata10[19];
-    char stringdata11[21];
-    char stringdata12[9];
-    char stringdata13[25];
-    char stringdata14[21];
-    char stringdata15[7];
-    char stringdata16[9];
+    char stringdata8[5];
+    char stringdata9[5];
+    char stringdata10[17];
+    char stringdata11[3];
+    char stringdata12[19];
+    char stringdata13[21];
+    char stringdata14[9];
+    char stringdata15[25];
+    char stringdata16[21];
+    char stringdata17[7];
+    char stringdata18[9];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSRequestBodyENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -89,15 +93,17 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSRequestBodyENDCLASS_t qt_meta_s
         QT_MOC_LITERAL(48, 15),  // "createLoginBody"
         QT_MOC_LITERAL(64, 8),  // "username"
         QT_MOC_LITERAL(73, 8),  // "password"
-        QT_MOC_LITERAL(82, 16),  // "createLogoutBody"
-        QT_MOC_LITERAL(99, 2),  // "id"
-        QT_MOC_LITERAL(102, 18),  // "createRegisterBody"
-        QT_MOC_LITERAL(121, 20),  // "createSearchFileBody"
-        QT_MOC_LITERAL(142, 8),  // "fileName"
-        QT_MOC_LITERAL(151, 24),  // "createSearchAllFilesBody"
-        QT_MOC_LITERAL(176, 20),  // "createUploadFileBody"
-        QT_MOC_LITERAL(197, 6),  // "userId"
-        QT_MOC_LITERAL(204, 8)   // "filePath"
+        QT_MOC_LITERAL(82, 4),  // "host"
+        QT_MOC_LITERAL(87, 4),  // "port"
+        QT_MOC_LITERAL(92, 16),  // "createLogoutBody"
+        QT_MOC_LITERAL(109, 2),  // "id"
+        QT_MOC_LITERAL(112, 18),  // "createRegisterBody"
+        QT_MOC_LITERAL(131, 20),  // "createSearchFileBody"
+        QT_MOC_LITERAL(152, 8),  // "fileName"
+        QT_MOC_LITERAL(161, 24),  // "createSearchAllFilesBody"
+        QT_MOC_LITERAL(186, 20),  // "createUploadFileBody"
+        QT_MOC_LITERAL(207, 6),  // "userId"
+        QT_MOC_LITERAL(214, 8)   // "filePath"
     },
     "RequestBody",
     "getRequestBody",
@@ -107,6 +113,8 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSRequestBodyENDCLASS_t qt_meta_s
     "createLoginBody",
     "username",
     "password",
+    "host",
+    "port",
     "createLogoutBody",
     "id",
     "createRegisterBody",
@@ -137,22 +145,22 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSRequestBodyENDCLASS[] = {
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
        1,    0,   62,    2, 0x0a,    1 /* Public */,
        3,    1,   63,    2, 0x0a,    2 /* Public */,
-       5,    2,   66,    2, 0x0a,    4 /* Public */,
-       8,    2,   71,    2, 0x0a,    7 /* Public */,
-      10,    2,   76,    2, 0x0a,   10 /* Public */,
-      11,    1,   81,    2, 0x0a,   13 /* Public */,
-      13,    0,   84,    2, 0x0a,   15 /* Public */,
-      14,    3,   85,    2, 0x0a,   16 /* Public */,
+       5,    4,   66,    2, 0x0a,    4 /* Public */,
+      10,    2,   75,    2, 0x0a,    9 /* Public */,
+      12,    2,   80,    2, 0x0a,   12 /* Public */,
+      13,    1,   85,    2, 0x0a,   15 /* Public */,
+      15,    0,   88,    2, 0x0a,   17 /* Public */,
+      16,    3,   89,    2, 0x0a,   18 /* Public */,
 
  // slots: parameters
     QMetaType::QJsonObject,
     QMetaType::Void, QMetaType::QJsonObject,    4,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::UShort,    6,    7,    8,    9,
+    QMetaType::Void, QMetaType::ULongLong, QMetaType::QString,   11,    6,
     QMetaType::Void, QMetaType::QString, QMetaType::QString,    6,    7,
-    QMetaType::Void, QMetaType::ULongLong, QMetaType::QString,    9,    6,
-    QMetaType::Void, QMetaType::QString, QMetaType::QString,    6,    7,
-    QMetaType::Void, QMetaType::QString,   12,
+    QMetaType::Void, QMetaType::QString,   14,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::ULongLong, QMetaType::QString, QMetaType::QString,   15,   12,   16,
+    QMetaType::Void, QMetaType::ULongLong, QMetaType::QString, QMetaType::QString,   17,   14,   18,
 
        0        // eod
 };
@@ -175,6 +183,8 @@ Q_CONSTINIT const QMetaObject RequestBody::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<quint16, std::false_type>,
         // method 'createLogoutBody'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<quint64, std::false_type>,
@@ -206,7 +216,7 @@ void RequestBody::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 0: { QJsonObject _r = _t->getRequestBody();
             if (_a[0]) *reinterpret_cast< QJsonObject*>(_a[0]) = std::move(_r); }  break;
         case 1: _t->setRequestBody((*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[1]))); break;
-        case 2: _t->createLoginBody((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
+        case 2: _t->createLoginBody((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<quint16>>(_a[4]))); break;
         case 3: _t->createLogoutBody((*reinterpret_cast< std::add_pointer_t<quint64>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
         case 4: _t->createRegisterBody((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
         case 5: _t->createSearchFileBody((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;

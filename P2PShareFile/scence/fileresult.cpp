@@ -78,3 +78,10 @@ FileResult::~FileResult()
 {
     delete ui;
 }
+
+void FileResult::on_pushButton_clicked()
+{
+    LocalConnection* localConnection = new LocalConnection();
+    localConnection->connectToHost(this->getHost(),this->getPort());
+}
+

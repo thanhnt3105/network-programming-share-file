@@ -11,12 +11,14 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QCommandLinkButton>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -34,6 +36,10 @@ public:
     QLabel *label_3;
     QLabel *label_4;
     QCommandLinkButton *registerLinkButton;
+    QLabel *label_5;
+    QComboBox *HostComboBox;
+    QLabel *label_6;
+    QSpinBox *portSpinBox;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -68,7 +74,7 @@ public:
         passLineEdit->setEchoMode(QLineEdit::Password);
         LoginPushButton = new QPushButton(centralwidget);
         LoginPushButton->setObjectName("LoginPushButton");
-        LoginPushButton->setGeometry(QRect(290, 320, 83, 29));
+        LoginPushButton->setGeometry(QRect(290, 370, 83, 29));
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(170, 190, 91, 31));
@@ -77,7 +83,19 @@ public:
         label_4->setGeometry(QRect(170, 240, 91, 31));
         registerLinkButton = new QCommandLinkButton(centralwidget);
         registerLinkButton->setObjectName("registerLinkButton");
-        registerLinkButton->setGeometry(QRect(190, 380, 281, 41));
+        registerLinkButton->setGeometry(QRect(190, 400, 281, 41));
+        label_5 = new QLabel(centralwidget);
+        label_5->setObjectName("label_5");
+        label_5->setGeometry(QRect(170, 290, 91, 31));
+        HostComboBox = new QComboBox(centralwidget);
+        HostComboBox->setObjectName("HostComboBox");
+        HostComboBox->setGeometry(QRect(260, 290, 201, 30));
+        label_6 = new QLabel(centralwidget);
+        label_6->setObjectName("label_6");
+        label_6->setGeometry(QRect(170, 330, 91, 31));
+        portSpinBox = new QSpinBox(centralwidget);
+        portSpinBox->setObjectName("portSpinBox");
+        portSpinBox->setGeometry(QRect(260, 330, 201, 29));
         LoginWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(LoginWindow);
         menubar->setObjectName("menubar");
@@ -103,6 +121,8 @@ public:
         label_3->setText(QCoreApplication::translate("LoginWindow", "Username", nullptr));
         label_4->setText(QCoreApplication::translate("LoginWindow", "Password", nullptr));
         registerLinkButton->setText(QCoreApplication::translate("LoginWindow", "Don't have account?, register now!", nullptr));
+        label_5->setText(QCoreApplication::translate("LoginWindow", "Host", nullptr));
+        label_6->setText(QCoreApplication::translate("LoginWindow", "Port", nullptr));
     } // retranslateUi
 
 };

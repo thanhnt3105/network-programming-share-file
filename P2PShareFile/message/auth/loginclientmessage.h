@@ -12,18 +12,27 @@ class LoginClientMessage : public ClientMessage
 private:
     QString username;
     QString password;
+    QString host;
+    quint16 port;
 
 public:
     explicit LoginClientMessage(QObject *parent = nullptr);
     explicit LoginClientMessage(QString input, QObject *parent = nullptr);
-    explicit LoginClientMessage(QString username, QString password, QObject *parent = nullptr);
+    explicit LoginClientMessage(QString username, QString password,QString host, quint16 port, QObject *parent = nullptr);
 
+
+    QString getHost() const;
+    void setHost(const QString &newHost);
+
+    quint16 getPort() const;
+    void setPort(quint16 newPort);
 
 public slots:
     void setUsername(QString username);
     void setPassword(QString password);
     QString getUsername();
     QString getPassword();
+
 signals:
 
 };

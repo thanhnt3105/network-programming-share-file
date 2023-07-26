@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QHostAddress>
+#include <peertopeer/localconnection.h>
 namespace Ui {
 class FileResult;
 }
@@ -38,6 +39,9 @@ public:
 
     QHostAddress getHost() const;
     void setHost(const QHostAddress &newHost);
+
+private slots:
+    void on_pushButton_clicked();
 
 private:
     Ui::FileResult *ui;

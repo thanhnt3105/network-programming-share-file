@@ -7,6 +7,7 @@
 #include <QProcess>
 #include <QJsonArray>
 
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow),currentUserLabel(nullptr)
@@ -15,6 +16,31 @@ MainWindow::MainWindow(QWidget *parent)
     this->client = new Client();
     this->client->start();
     this->file = new File();
+    QString user = "User: "+Session::getInstance()->getUsername();
+    this->ui->currentUserLabel->setText(user);
+}
+
+MainWindow::MainWindow(QString host, quint16 port, QWidget *parent):QMainWindow(parent)
+    , ui(new Ui::MainWindow),currentUserLabel(nullptr)
+{
+    ui->setupUi(this);
+    this->client = new Client();
+    this->client->start();
+    this->file = new File();
+    QString user = "User: "+Session::getInstance()->getUsername();
+    this->ui->currentUserLabel->setText(user);
+    this->localServer = new LocalServer(this);
+    QHostAddress ip = QHostAddress(host);
+    this->localServer->setLocalServerInfo(ip,static_cast<int>(port));
+
+    bool check =  this->localServer->startServer();
+//    if(check==true){
+//        QMessageBox::critical(nullptr, "Error", "A new connection");
+//    } else{
+//        QMessageBox::critical(nullptr, "Error", "No connection");
+//    }
+    qDebug() << "check" << check;
+    connect(this->localServer, SIGNAL(newLocalConnection(LocalConnection*)), this, SLOT(handleNewConnection(LocalConnection*)));
 
 }
 
@@ -63,8 +89,8 @@ void MainWindow::handleGetFileResponse(const QJsonDocument &response)
                     QString fileName = fileDataObject.value("file_name").toString();
                     QString filePath = fileDataObject.value("file_path").toString();
                     QString username = fileDataObject.value("username").toString();
-                    QHostAddress address = QHostAddress("127.0.0.1");
-                    int port = 1234;
+                    QHostAddress address = QHostAddress(fileDataObject.value("host").toString());
+                    int port =fileDataObject.value("port").toInt();
                     qDebug() << "HERE";
                     qDebug() << "file name -------" << fileName << filePath << username;
                     FileResult* fileResult = new FileResult(fileName, filePath,username,address,port);
@@ -127,5 +153,11 @@ void MainWindow::handleUploadResponse(const QJsonDocument &response)
     } else {
         QMessageBox::critical(nullptr, "Error", "Upload file successfully");
     }
+}
+
+void MainWindow::handleNewConnection(LocalConnection *)
+{
+    qDebug() << "123412341234";
+    QMessageBox::critical(nullptr, "Error", "A new connection");
 }
 

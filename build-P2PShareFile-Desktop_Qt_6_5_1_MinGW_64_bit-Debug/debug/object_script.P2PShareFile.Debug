@@ -31,6 +31,7 @@ debug/connectioninfor.o
 debug/requestprocessing.o
 debug/server.o
 debug/servercreatemessage.o
+debug/session.o
 debug/qrc_resouce.o
 debug/moc_client.o
 debug/moc_filecontroller.o
